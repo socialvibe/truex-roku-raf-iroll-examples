@@ -14,9 +14,6 @@ function startExample() as Boolean
   m.raf.video = m.video
   m.raf.control = "RUN"
 
-  ' some kind of hack useful in local testing
-  m.global.addFields({ "__raf" : m.raf })
-
   return true
 end function
 

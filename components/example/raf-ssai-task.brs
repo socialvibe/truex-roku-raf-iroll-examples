@@ -46,18 +46,20 @@ function playStitchedContentWithAds(adPods_ As Object, video_ as Object) as Void
     msgType_ = type(msg_)
 
     ' check if we're rendering a stitched ad which handles the event
-    currentAd_ = m.raf.stitchedAdHandledEvent( msg_, player_ )
+    currentAdEvent_ = m.raf.stitchedAdHandledEvent(msg_, player_)
 
-    if currentAd_ <> invalid and currentAd_.evtHandled <> invalid then
+    if currentAdEvent_ <> invalid and currentAdEvent_.evtHandled <> invalid then
       ' ad handled event
 
-      if currentAd_.adExited then
+      if currentAdEvent_.adExited then
         trace("playStitchedContentWithAds() - User exited ad view, returning to content selection")
         playContent_ = false
       end if
 
-      if isTrueXAdEvent(msg_, currentAd_, m.adPods) then
-        handleTrueXAdExitEvent(msg_)
+      currentAdInfo_ = findCurrentAdInfo(m.adPods, currentAdEvent_)
+
+      if isTrueXAdEvent(msg_, currentAdInfo_) then
+        handleTrueXAdEvent(msg_, currentAdInfo_)
       end if
     else
       ' no current ad, the ad did not handle event, fall through to default event handling

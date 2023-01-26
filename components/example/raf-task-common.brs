@@ -1,6 +1,6 @@
 function handleRafTrackingEvent(iface_, event_ = invalid, ctx_ = invalid) as Void
   if event_ = invalid and ctx_.time <> invalid then
-    wrapperEvent_ = { type: "__PrerollProgress", time: ctx_.time }
+    wrapperEvent_ = { type: "video-progress", time: ctx_.time }
   else
     wrapperEvent_ = { type: event_ }
   end if
@@ -10,6 +10,7 @@ function handleRafTrackingEvent(iface_, event_ = invalid, ctx_ = invalid) as Voi
 
   iface_.wrapperEvent = wrapperEvent_
 end function
+
 function overrideRafSkipAPI() as Void
   ' m.raf.skipAdsInCurrentPod = function() as Void
   '   dt_ = CreateObject("roDateTime")
