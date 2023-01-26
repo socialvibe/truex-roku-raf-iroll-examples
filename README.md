@@ -28,12 +28,6 @@ This project contains sample source code that demonstrates how to integrate true
 
 ## How to run this example
 
-Example tags:
-
-- ATTX Target - https://ee.truex.com/ads/af2eac91d/config_json
-- ATTX Today's Military Influencer (Fire Team) - https://ee.truex.com/ads/aad3e82fa/config_json
-- ATTX Target, Multiple Videos - https://ee.truex.com/ads/afca28654/config_json
-
 Run the following code from the project's dir.
 Note: Please replace <ROKU_DEV_TARGET> and <DEV_PASSWORD> with your actual device ip and password.
 
@@ -41,7 +35,6 @@ Note: Please replace <ROKU_DEV_TARGET> and <DEV_PASSWORD> with your actual devic
 yarn just package-and-run \
   --device-ip=<ROKU_DEV_TARGET> \
   --device-pass=<DEV_PASSWORD> \
-  --preview-uri="<ENGAGEMENT_AD_TAG_URL>"
 ```
 
 ## Integration
@@ -89,14 +82,10 @@ This event is relevant for `Sponsored Ad Break` product only and will fire when 
 
 #### `exitWithAdFree`
 ```brightscript
-sub handleEngagementEvent(msg_ as Object)
+sub handleTrueXAdEvent(msg_ as Object)
     evt_ = msg_.GetData()
 
-    ' evt_ = {
-    '     type: "backOutBeforeTrueAttention"
-    '     timespent: 113631, // spent time since the start in MS
-    '     timespentwithpauses: 113631, // spent time since the start in MS, not includes yes-or-no dialog time
-    ' }
+    ' evt_ = { type: "exitWithAdFree" }
 end sub
 ```
 
@@ -105,12 +94,8 @@ This event is relevant for `Sponsored Stream` product only and will fire when th
 
 [gulp_guide]: https://gulpjs.com/docs/en/getting-started/quick-start
 [build_include_component_sources_snippet]: ./../just.config.ts#L136-L143
-[engagement_handling_events]: ./../components/infillion/examples/engagement/engagement-event-handler.brs
+[event_loop_truex_events_checking]: ./components/example//raf-ssai-task.brs#L59-L61
 
 [roku_device_development_setup]: https://developer.roku.com/docs/developer-program/getting-started/developer-setup.md
 [yarn_install_guide]: https://yarnpkg.com/getting-started/install
 [yarn_link_guide]: https://classic.yarnpkg.com/lang/en/docs/cli/link/
-[bluescript_reference]: https://github.com/socialvibe/truex-ads-docs/blob/master/bluescript-reference.md
-[truex_roku_renderer_repo]: https://github.com/socialvibe/TruexAdRenderer-Roku
-[integration_engagement_component]: docs/engagement-component-integration.md
-[integration_bluescript_engine]: docs/bluescript-engine-integration.md
