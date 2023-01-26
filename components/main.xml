@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="Main" extends="Scene" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+    <interface>
+        <function name="setup" />
+    </interface>
+
+    <script type="text/brightscript" uri="pkg:/components/main.brs" />
+    <script type="text/brightscript" uri="pkg:/components/utils/trace.brs" />
+
+    <children>
+        <Rectangle
+            id="_bg"
+            color="0x343434"
+            width="1920"
+            height="1080"
+            translation="[0, 0]"
+        />
+    </children>
+</component>

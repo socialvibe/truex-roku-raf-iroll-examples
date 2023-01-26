@@ -1,0 +1,16 @@
+title=Infillion // BlueScript Engagement // Reference App
+subtitle=Sample App
+major_version=1
+minor_version=0
+build_version=00000
+splash_color=#404040
+
+ui_resolutions=fhd
+bs_libs_required=roku_ads_lib
+
+# This enables your application to deep link into content without re-launching your channel.
+supports_input_launch=1
+
+# instant resume
+# sdk_instant_resume=1
+# run_as_process=1

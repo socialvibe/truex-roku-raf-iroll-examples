@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="ExampleBase" extends="Group"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+  <interface>
+    <field id="wrapperEvent" type="assocarray" alwaysNotify="true" />
+    <field id="state" type="string" />
+    <field id="error" type="assocarray" alwaysNotify="true" />
+    <field id="loggingCat" type="string" />
+
+    <function name="start" />
+    <function name="unload" />
+
+  </interface>
+
+  <script type="text/brightscript" uri="pkg:/components/utils/trace.brs" />
+  <script type="text/brightscript" uri="pkg:/components/utils/types.brs" />
+  <script type="text/brightscript" uri="pkg:/components/example/example-base.brs" />
+</component>

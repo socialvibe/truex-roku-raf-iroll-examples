@@ -1,0 +1,15 @@
+{
+  "files": [
+    /* default entries */
+    "source/**/*",
+    "components/**/*",
+    "images/**/*",
+    "manifest",
+    /* */
+    { "src": "node_modules/@infillion/truex-engagement-roku/res/**/*", "dest": "res" },
+    { 
+        "src": "node_modules/@infillion/truex-engagement-roku/components/infillion/**/*", 
+        "dest": "components/infillion" 
+    }
+  ]
+}
