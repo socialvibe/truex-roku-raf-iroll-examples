@@ -15,9 +15,13 @@ end function
 function playStitchedContentWithAds(adPods_ As Object, video_ as Object) as Void
   trace("playStitchedContentWithAds() -- raf version: " + m.raf.getLibVersion())
 
-  ? FormatJson(adPods_)
+  ' we save a deep copy of AdPods, because in case where TrueX Ad completed RAF's default implementation supporting TrueX Ad Flow
+  ' will manipulate AdPods and Ad instances
+  ' Another option is to override the following methods with empty function
+  ' Roku_Ads # skipAllAdPods
+  ' Roku_Ads # skipAdsInCurrentPod
+  m.adPods = ParseJson(FormatJson(adPods_))
 
-  m.adPods = adPods_
   m.video = video_
   m.raf.stitchedAdsInit(adPods_)
 
@@ -59,12 +63,9 @@ function playStitchedContentWithAds(adPods_ As Object, video_ as Object) as Void
       currentAdInfo_ = findCurrentAdInfo(m.adPods, currentAdEvent_)
 
       ' ? ""
-      ' ? currentAdInfo_
-      ' ? "isTrueXAdEvent: ";isTrueXAdEvent(msg_, currentAdInfo_)
-      ' ? "evt: ";FormatJson(msg_.GetData())
+      ' ? "node: ";msg_.GetNode();", field: ";msg_.GetField();", data: ";msg_.GetData()
+      ' ? "isTrueXAdEvent: ";_isTrueXAdEvent(msg_, currentAdInfo_)
       ' ? ""
-
-      ' trace("eventloop() -- truex-ad-event: ", FormatJson(msg_.GetData()))
 
       if _isTrueXAdEvent(msg_, currentAdInfo_) then
         if m.truex = invalid then

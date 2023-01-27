@@ -1,5 +1,6 @@
 function _TrueXAdHelper(video_ as Object, currentAdInfo_ as Object) as Object
-  deepCopy_ = ParseJson(FormatJson(currentAdInfo_))
+  ' deepCopy_ = ParseJson(FormatJson(currentAdInfo_))
+  deepCopy_ = currentAdInfo_
 
   return {
     scope: m,
@@ -39,33 +40,36 @@ sub _TrueXAdHelper_HandleTrueXAdEvent(msg_ as Object, currentAdInfo_ as Object)
     return
   end if
 
+  if m._isVideoPositionChangeEvent(msg_) and not(m.adStarted) then
+    m._handleAdStarted()
+    return
+  end if
+
   evt_ = msg_.GetData()
 
   if not(m._isObject(evt_)) or not(m._isString(evt_.type)) then
     return
   end if
 
-  if m._isVideoPositionChangeEvent(msg_) and not(m.adStarted) then
-    m._handleAdStarted()
-  else if m._isInnovidRendererEvent(msg_) and evt_.type = "Ended" then
+  if m._isInnovidRendererEvent(msg_) and evt_.type = "Ended" then
     m._handleAdEnded()
   else if evt_.type = "exitBeforeOptIn" then
     m._exitPlayback()
   else if evt_.type = "exitSelectWatch" or evt_.type = "exitAutoWatch" then
-    m._skipTrueXAdAndContinue(currentAdInfo_)
+    m._skipTrueXAdAndContinue()
   else if evt_.type = "exitWithSkipAdBreak" then
-    m._skipCurrentAdPodAndContinue(currentAdInfo_)
+    m._skipCurrentAdPodAndContinue()
   end if
 end sub
 
-sub __TrueXAdHelper_SkipTrueXAdAndContinue(currentAdInfo_ as Object)
-  currentAdInfo_.ad.viewed = true
+sub __TrueXAdHelper_SkipTrueXAdAndContinue()
+  m.ad.viewed = true
 
   ' calculate the next ad position in stream
   ' in case the app has better timing info from SSAI provider better to use it here
-  nextAdStartPosition_ = currentAdInfo_.adPod.rendertime + currentAdInfo_.ad.duration
+  nextAdStartPosition_ = m.adPod.rendertime + m.ad.duration
 
-  trace(Substitute("truex # skipTrueXAdAndContinue() -- seek: ", nextAdStartPosition_.ToStr()))
+  trace(Substitute("truex # skipTrueXAdAndContinue() -- seek: {0} sec", nextAdStartPosition_.ToStr()))
 
   ' seek to the next Ad start position
   m.video.control = "play"
@@ -77,15 +81,14 @@ sub __TrueXAdHelper_ExitPlayback()
   ' this event fired when the user
 end sub
 
-sub __TrueXAdHelper_SkipCurrentAdPodAndContinue(currentAdInfo_ as Object)
-  currentAdPod_ = currentAdInfo_.adPod
-  nextContentPortionStartPosition_ = currentAdPod_.rendertime
+sub __TrueXAdHelper_SkipCurrentAdPodAndContinue()
+  nextContentPortionStartPosition_ = m.adPod.rendertime
 
   ' mark this as `viewed`
   currentAdPod_.viewed = true
 
   ' mark every ad in the current adPod as `viewed`
-  for each ad_ in currentAdPod_.ads
+  for each ad_ in m.adPod.ads
     ad_.viewed = true
     nextContentPortionStartPosition_ += ad_.duration
   end for

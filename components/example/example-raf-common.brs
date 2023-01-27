@@ -1,44 +1,42 @@
-function resolveAdPods(data_ as Object, adPodType_ = "preroll", renderTime_ = 0) as Object
-  ad_ = data_.ad
+function resolveAdPods(data_ as Object) as Object
+  truexAd_ = data_.ad
 
   return [{
     viewed         : false,
-    rendersequence : adPodType_,
-    rendertime     : renderTime_,
-    duration       : ad_.duration,
-    ads            : [ data_.ad ],
-    ' ads: [
-    '   {
-    '     duration     : data_.duration,
-    '     streamformat : "iroll",
-    '     adId         : "innovid-iroll-1",
-    '     adServer     : data_.uri,
-    '     tracking     : tracking_,
-    '     companionAds : [
-    '       ' {
-    '       '   width    : size_.w,
-    '       '   height   : size_.h,
-    '       '   bitrate  : 0,
-    '       '   url      : data_.uri,
-    '       '   mimetype : "application/json"
-    '       ' }
-    '     ],
-    '     streams : [
-    '       {
-    '         width    : size_.w,
-    '         height   : size_.h,
-    '         bitrate  : 0,
-    '         url      : data_.uri,
-    '         mimetype : "application/json"
-    '       }
-    '     ]
-    '   }
-    ' ]
+    rendersequence : "preroll",
+    rendertime     : 0,
+    duration       : (truexAd_.duration + 29.2 + 30.3 + 32.2),
+    ads            : [
+      data_.ad,
+      {
+        duration     : 29.2, ' the actual length should be checked with SSAI provider
+        streamformat : "mp4",
+        adId         : "sample-ad-1",
+        adServer     : "no_url_imported_ad",
+        tracking     : [],
+        companionAds : [],
+        streams      : [], ' no stream def - actual video embedded into the sample video
+      },
+      {
+        duration     : 30.3, ' the actual length should be checked with SSAI provider
+        streamformat : "mp4",
+        adId         : "sample-ad-2",
+        adServer     : "no_url_imported_ad",
+        tracking     : [],
+        companionAds : [],
+        streams      : [], ' no stream def - actual video embedded into the sample video
+      },
+      {
+        duration     : 32.2, ' the actual length should be checked with SSAI provider
+        streamformat : "mp4",
+        adId         : "sample-ad-3",
+        adServer     : "no_url_imported_ad",
+        tracking     : [],
+        companionAds : [],
+        streams      : [], ' no stream def - actual video embedded into the sample video
+      },
+    ]
   }]
-
-  ' content_.streamFormat = "hls"
-  ' content_.length = 605
-  ' content_.url = "http://video.innovid.com/common/video/timecode_10min_5s_lead/source.m3u8"
 end function
 
 function handleRAFWrapperEvent(evt_ as Object) as Void

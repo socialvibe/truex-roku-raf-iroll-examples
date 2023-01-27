@@ -47,12 +47,21 @@ Also this app uses [a prepared video][video_url] to simulate SSAI stream with ad
 
 ## Integration
 
+### Disabling RAF default implementation supporting TrueX Ad Flow
+RAF have 2 special methods in order to support TrueX Ad Flow - `Roku_Ads # skipAllAdPods` and `Roku_Ads # skipAdsInCurrentPod`.
+These methods work incorrectly in SSAI environment.
+
+So, in order to resolve there are 2 options:
+- create and save a deep copy of AdPods object ( will be used in `_isTrueXAdEvent` method)
+- override these 2 RAF methods with empty function
+
+
 ### Event Loop Changes
 After handling the current message by [RAF#stitchedAdHandledEvent][raf_stitched_ad_handled_event] method we added additional check relevant to TrueX Ad flow.
 It will:
 - check if the current message is relevant to TrueX Ad
 - create `_TrueXAdHelper` instance
-- invoke `TrueXAdHelper` [message handling meethod][truex_helper_event_handling]
+- invoke `TrueXAdHelper` [message handling method][truex_helper_event_handling]
 - dispose `_TrueXAdHelper` when TrueX Ad ended.
 
 ```brightscript
@@ -88,7 +97,6 @@ end if
 ```
 
 ### Handling Events from true[X] Ad
-
 Please check reference-app's example of [handling these events][truex_helper_event_handling]
 
 #### `exitSelectWatch`
@@ -99,8 +107,8 @@ sub handleTrueXAdEvent(msg_ as Object)
     ' evt_ = { type: "exitSelectWatch" }
 end sub
 ```
-
 This event will fire if the user opts for a normal video ad experience
+Check [an example][truex_helper_skip_truex_and_start_next_ad] how to handle this event.
 
 #### `exitAutoWatch`
 ```brightscript
@@ -112,6 +120,7 @@ end sub
 
 ```
 This event will fire when the user simply allowed the choice card countdown to expire.
+Check [an example][truex_helper_skip_truex_and_start_next_ad] how to handle this event.
 
 #### `exitWithSkipAdBreak`
 ```brightscript
@@ -122,6 +131,7 @@ sub handleTrueXAdEvent(msg_ as Object)
 end sub
 ```
 This event is relevant for `Sponsored Ad Break` product only and will fire when the user exits the engagement unit by pressing the **Return to Content** button or pressing `Back` button on his remote **after earning credit**.
+Check [an example][truex_helper_skip_ad_pod_and_start_next_content_portion] how to handle this event.
 
 #### `exitWithAdFree`
 ```brightscript
@@ -135,9 +145,12 @@ This event is relevant for `Sponsored Stream` product only and will fire when th
 
 [gulp_guide]: https://gulpjs.com/docs/en/getting-started/quick-start
 [build_include_component_sources_snippet]: ./../just.config.ts#L136-L143
-[truex_helper_event_handling]: ./components/example/truex-helper.brs#L37-L59
-[event_loop_truex_events_checking]: ./components/example/raf-ssai-task.brs#L59-L61
-[adpods_object_creation]: ./components/example/example-raf-common.brs
+[truex_helper_event_handling]: ./components/example/truex-helper.brs#L37-L62
+[truex_helper_skip_truex_and_start_next_ad]: ./components/example/truex-helper.brs#L61-L73
+[truex_helper_skip_ad_pod_and_start_next_content_portion]: ./components/example/truex-helper.brs#L80-98
+[event_loop_truex_events_checking]: ./components/example/raf-ssai-task.brs#L52-L81
+[event_loop_ad_pods_deep_copy]: ./components/example/raf-ssai-task.brs#L18-L23
+[adpods_object_creation]: ./components/example/example-raf-common.brs#L1-L80
 [video_url]: http://development.scratch.truex.com.s3.amazonaws.com/roku/simon/roku-reference-app-stream-med.mp4
 
 [roku_device_development_setup]: https://developer.roku.com/docs/developer-program/getting-started/developer-setup.md

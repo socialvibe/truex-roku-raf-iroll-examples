@@ -118,7 +118,7 @@ async function resolvePreviewConfig(opts: Options): Promise<PreviewConfiguration
   return {
     type: defaultPreviewType,
     ad: {
-      duration: 30,
+      duration: 15, // choice_card video duration used in the sample video
       streamFormat: 'iroll',
       adserver: 'no_url_imported_ad',
       adId: `truex-${randomUUID()}`,
