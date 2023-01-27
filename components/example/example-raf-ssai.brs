@@ -9,7 +9,7 @@ function startExample() as Boolean
 
   m.raf = m.top.createChild("RAFSSAITask")
   m.raf.observeFieldScoped("wrapperEvent", "handleRAFWrapperEvent")
-  m.raf.adPods = resolveAdPods(m.data, m.size, "preroll", 5)
+  m.raf.adPods = resolveAdPods(m.data)
   m.raf.view = m.top
   m.raf.video = m.video
   m.raf.control = "RUN"
@@ -20,9 +20,14 @@ end function
 function setupVideo() as Void
   content_ = CreateObject("roSGNode", "ContentNode")
   content_.id = "content"
-  content_.streamFormat = "hls"
-  content_.length = 605
-  content_.url = "http://video.innovid.com/common/video/timecode_10min_5s_lead/source.m3u8"
+
+  ' content_.streamFormat = "hls"
+  ' content_.length = 605
+  ' content_.url = "http://video.innovid.com/common/video/timecode_10min_5s_lead/source.m3u8"
+
+  content_.streamFormat = "mp4"
+  content_.url = "http://development.scratch.truex.com.s3.amazonaws.com/roku/simon/roku-reference-app-stream-med.mp4"
+  content_.length = 1535
 
   trace("setupVideo()", content_)
 

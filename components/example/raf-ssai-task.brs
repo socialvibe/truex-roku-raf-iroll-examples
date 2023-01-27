@@ -7,7 +7,6 @@ function runInBackground()
   m.raf.setDebugOutput(true)
   m.raf.setTrackingCallback(handleRAFTrackingEvent, m.top)
 
-  overrideRafSkipAPI()
   playStitchedContentWithAds(m.top.adPods, m.top.video)
 
   reset()
@@ -15,9 +14,11 @@ end function
 
 function playStitchedContentWithAds(adPods_ As Object, video_ as Object) as Void
   trace("playStitchedContentWithAds() -- raf version: " + m.raf.getLibVersion())
-  trace("playStitchedContentWithAds() -- ad pods", adPods_[0])
+
+  ? FormatJson(adPods_)
 
   m.adPods = adPods_
+  m.video = video_
   m.raf.stitchedAdsInit(adPods_)
 
   port_ = CreateObject("roMessagePort")
@@ -35,9 +36,8 @@ function playStitchedContentWithAds(adPods_ As Object, video_ as Object) as Void
   m.currentPosition = -1
   m.currentState = "loading"
 
-  stopPlaybackAt_ = adPods_[0].rendertime + adPods_[0].duration + 10
-
   player_ = { sgNode: video_, port: port_ }
+  videoId_ = m.video.id
 
   trace("playStitchedContentWithAds() - loop started")
 
@@ -48,7 +48,7 @@ function playStitchedContentWithAds(adPods_ As Object, video_ as Object) as Void
     ' check if we're rendering a stitched ad which handles the event
     currentAdEvent_ = m.raf.stitchedAdHandledEvent(msg_, player_)
 
-    if currentAdEvent_ <> invalid and currentAdEvent_.evtHandled <> invalid then
+    if currentAdEvent_ <> invalid and currentAdEvent_.evtHandled = true then
       ' ad handled event
 
       if currentAdEvent_.adExited then
@@ -58,12 +58,28 @@ function playStitchedContentWithAds(adPods_ As Object, video_ as Object) as Void
 
       currentAdInfo_ = findCurrentAdInfo(m.adPods, currentAdEvent_)
 
-      if isTrueXAdEvent(msg_, currentAdInfo_) then
-        handleTrueXAdEvent(msg_, currentAdInfo_)
+      ' ? ""
+      ' ? currentAdInfo_
+      ' ? "isTrueXAdEvent: ";isTrueXAdEvent(msg_, currentAdInfo_)
+      ' ? "evt: ";FormatJson(msg_.GetData())
+      ' ? ""
+
+      ' trace("eventloop() -- truex-ad-event: ", FormatJson(msg_.GetData()))
+
+      if _isTrueXAdEvent(msg_, currentAdInfo_) then
+        if m.truex = invalid then
+          m.truex = _TrueXAdHelper(m.video, currentAdInfo_)
+        end if
+
+        m.truex.handleTrueXAdEvent(msg_, currentAdInfo_)
+
+        if m.truex.adEnded then
+          m.truex = invalid
+        end if
       end if
     else
       ' no current ad, the ad did not handle event, fall through to default event handling
-      if msgType_ = "roSGNodeEvent"
+      if msgType_ = "roSGNodeEvent" and msg_.GetNode() = videoId_ then
 
         field_ = msg_.GetField()
         value_ = msg_.GetData()
@@ -81,9 +97,6 @@ function playStitchedContentWithAds(adPods_ As Object, video_ as Object) as Void
           m.currentPosition = value_
           m.currentState = "playing"
 
-          if value_ > stopPlaybackAt_ then
-            video_.control = "STOP"
-          end if
         else if field_ = "state" then
           m.currentState = value_
 
@@ -105,4 +118,52 @@ function reset() as Void
 
   m.top.video = invalid
   m.top.view = invalid
+end function
+
+function handleRafTrackingEvent(_iface, event_ = invalid, ctx_ = invalid) as Void
+  trace(Substitute("handleRafTrackingEvent() -- evt: {0}, data: {1}", _asString(event_), FormatJson(ctx_)))
+
+  if not(_isString(event_)) then
+    return
+  end if
+
+  if event_ = "PodStart" then
+    trace("handlePodStart()")
+  else if event_ = "PodComplete" then
+    trace("handlePodComplete()")
+  else if event_ = "Skip"
+    trace("handleAdSkipped()")
+  end if
+end function
+
+' @returns {{ adPod: object, ad: object, adPodIndex: number, adIndex: number } | invalid}
+function findCurrentAdInfo(adPods_ as Object, adEventInfo_ as Object) as Dynamic
+  ' .adpodindex starts with 1
+  ' .adindex starts with 1
+
+  currentAdPod_ = adPods_[_Math_Max(0, adEventInfo_.adpodindex - 1)]
+
+  ' truex ad should be the first ad in Ad break.
+  if currentAdPod_ = invalid or adEventInfo_.adindex > 1 then
+    return invalid
+  end if
+
+  currentAd_ = currentAdPod_.ads[_Math_Max(0, adEventInfo_.adindex - 1)]
+
+  return {
+    adPod: currentAdPod_,
+    adPodIndex: adEventInfo_.adPodIndex,
+    ad: currentAd_,
+    adIndex: adEventInfo_.adIndex,
+  }
+end function
+
+function _isTrueXAdEvent(msg_ as Object, currentAdInfo_ as Dynamic) as Boolean
+  if type(msg_) <> "roSGNodeEvent" or currentAdInfo_ = invalid then
+    return false
+  end if
+
+  ' in this particular case we assume `adId` should start with `truex-`
+  ' but in real world screnario it depends on the publisher adserver's response
+  return _asString(currentAdInfo_.ad.adId).StartsWith("truex-")
 end function

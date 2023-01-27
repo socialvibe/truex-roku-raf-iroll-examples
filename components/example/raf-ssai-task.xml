@@ -16,7 +16,6 @@
   <script type="text/brightscript" uri="pkg:/components/utils/types.brs" />
   <script type="text/brightscript" uri="pkg:/components/utils/math.brs" />
   <script type="text/brightscript" uri="pkg:/components/example/raf-ssai-task.brs" />
-  <script type="text/brightscript" uri="pkg:/components/example/raf-task-common.brs" />
   <script type="text/brightscript" uri="pkg:/components/example/truex-helper.brs" />
 
   <script type="text/brightscript">

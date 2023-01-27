@@ -6,6 +6,12 @@ function init() as Void
   m.top.state = "not_started"
   m.top.error = invalid
 
+  ' disable Innovid log output
+  temp_ = CreateObject("roSGNode", "ContentNode")
+  temp_.addFields({ "__LoggerLevel": { value: 0 }})
+
+  m.global.addFields({ "_Innovid": temp_ })
+
   m.data = invalid
   m.size = invalid
 

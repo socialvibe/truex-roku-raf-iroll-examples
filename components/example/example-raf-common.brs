@@ -1,4 +1,4 @@
-function resolveAdPods(data_ as Object, size_ as Object, adPodType_ = "preroll", renderTime_ = 0) as Object
+function resolveAdPods(data_ as Object, adPodType_ = "preroll", renderTime_ = 0) as Object
   ad_ = data_.ad
 
   return [{

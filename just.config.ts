@@ -103,26 +103,6 @@ async function resolveDeviceConfig(opts: Options): Promise<Device> {
 }
 
 async function resolvePreviewConfig(opts: Options): Promise<PreviewConfiguration | undefined> {
-  // if (!opts.previewUri) {
-  //   return undefined;
-  // }
-
-  // const creativeJsonResponse = await fetch(opts.previewUri, { method: 'GET' });
-  // const creativeJson = await creativeJsonResponse.json();
-  // const runtimeParameters = await resolveRuntimeParameters(
-  //   opts.useTestParams, opts.truexAdTag, opts.previewTaDuration
-  // );
-
-  // if (isEmpty(creativeJson)) {
-  //   return undefined;
-  // }
-
-  // return {
-  //   type: defaultPreviewType,
-  //   ['runtime-parameters']: runtimeParameters,
-  //   ['creative-json']: creativeJson,
-  // };
-
   const truexAdResponse = await fetch(opts.truexAdTag, { method: 'GET' });
   const truexAdResponseBody = await truexAdResponse.text();
 
@@ -155,7 +135,6 @@ async function resolvePreviewConfig(opts: Options): Promise<PreviewConfiguration
     }
   };
 }
-
 
 async function resolveRuntimeParameters(useTestParams: boolean, truexAdTag: string, taDuration?: number): Promise<Record<string, string>> {
   return useTestParams === true

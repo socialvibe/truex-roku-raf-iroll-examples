@@ -27,21 +27,69 @@ This project contains sample source code that demonstrates how to integrate true
   ```
 
 ## How to run this example
-
-Run the following code from the project's dir.
+Note: Run the following code from the project's dir.
 Note: Please replace <ROKU_DEV_TARGET> and <DEV_PASSWORD> with your actual device ip and password.
 
 ```bash
 yarn just package-and-run \
   --device-ip=<ROKU_DEV_TARGET> \
   --device-pass=<DEV_PASSWORD> \
+  --truex-ad-tag="https://qa-get.truex.com/50f0b0944f3a826e6d73c8895cb868fb2af0171c/vast/connected_device/inline?network_user_id=truex_engagement_test_user_001"
 ```
+
+Running this script will load TrueX Ad Tag and create [payload.json][app_payload] file contains RAF compatible Ad object.
+In this demo we use Innovid Iroll Renderer ( distributed with RAF library ) to render TrueX Ad.
+This Ad object will be used to [define AdPod with 4 Ads][adpods_object_creation].
+
+The first ad will be TrueX Ad and 3 additional video ads.
+Also this app uses [a prepared video][video_url] to simulate SSAI stream with ads.
+
 
 ## Integration
 
+### Event Loop Changes
+After handling the current message by [RAF#stitchedAdHandledEvent][raf_stitched_ad_handled_event] method we added additional check relevant to TrueX Ad flow.
+It will:
+- check if the current message is relevant to TrueX Ad
+- create `_TrueXAdHelper` instance
+- invoke `TrueXAdHelper` [message handling meethod][truex_helper_event_handling]
+- dispose `_TrueXAdHelper` when TrueX Ad ended.
+
+```brightscript
+
+' check if we're rendering a stitched ad which handles the event
+currentAdEvent_ = Roku_Ads().stitchedAdHandledEvent(msg_, player_)
+
+if currentAdEvent_ <> invalid and currentAdEvent_.evtHandled = true then
+  ' ad handled event
+
+  if currentAdEvent_.adExited then
+    trace("playStitchedContentWithAds() - User exited ad view, returning to content selection")
+    playContent_ = false
+  end if
+
+  ' @type {{ ad: object, adPod: object, adPodIndex: number, adIndex: number }}
+  currentAdInfo_ = findCurrentAdInfo(m.adPods, currentAdEvent_)
+
+  if _isTrueXAdEvent(msg_, currentAdInfo_) then
+    if m.truex = invalid then
+      m.truex = _TrueXAdHelper(m.video, currentAdInfo_)
+    end if
+
+    m.truex.handleTrueXAdEvent(msg_, currentAdInfo_)
+
+    if m.truex.adEnded then
+      m.truex = invalid
+    end if
+  end if
+else
+  ' other logic
+end if
+```
+
 ### Handling Events from true[X] Ad
-Once `init` has been called on the component, it will start to emit events.
-Please check reference-app's example of [handling these events][engagement_handling_events]
+
+Please check reference-app's example of [handling these events][truex_helper_event_handling]
 
 #### `exitSelectWatch`
 ```brightscript
@@ -63,10 +111,7 @@ sub handleTrueXAdEvent(msg_ as Object)
 end sub
 
 ```
-
 This event will fire when the user simply allowed the choice card countdown to expire.
-
-This is an `exit event`. This event will fire when the user exits the engagement unit by pressing the **Return to Content** button **after earning credit**.
 
 #### `exitWithSkipAdBreak`
 ```brightscript
@@ -76,8 +121,6 @@ sub handleTrueXAdEvent(msg_ as Object)
     ' evt_ = { type: "exitWithSkipAdBreak" }
 end sub
 ```
-
-
 This event is relevant for `Sponsored Ad Break` product only and will fire when the user exits the engagement unit by pressing the **Return to Content** button or pressing `Back` button on his remote **after earning credit**.
 
 #### `exitWithAdFree`
@@ -88,14 +131,16 @@ sub handleTrueXAdEvent(msg_ as Object)
     ' evt_ = { type: "exitWithAdFree" }
 end sub
 ```
-
 This event is relevant for `Sponsored Stream` product only and will fire when the user exits the engagement unit by pressing the **Return to Content** button or pressing `Back` button on his remote **after earning credit**.
-
 
 [gulp_guide]: https://gulpjs.com/docs/en/getting-started/quick-start
 [build_include_component_sources_snippet]: ./../just.config.ts#L136-L143
-[event_loop_truex_events_checking]: ./components/example//raf-ssai-task.brs#L59-L61
+[truex_helper_event_handling]: ./components/example/truex-helper.brs#L37-L59
+[event_loop_truex_events_checking]: ./components/example/raf-ssai-task.brs#L59-L61
+[adpods_object_creation]: ./components/example/example-raf-common.brs
+[video_url]: http://development.scratch.truex.com.s3.amazonaws.com/roku/simon/roku-reference-app-stream-med.mp4
 
 [roku_device_development_setup]: https://developer.roku.com/docs/developer-program/getting-started/developer-setup.md
 [yarn_install_guide]: https://yarnpkg.com/getting-started/install
 [yarn_link_guide]: https://classic.yarnpkg.com/lang/en/docs/cli/link/
+[raf_stitched_ad_handled_event]: https://developer.roku.com/en-ca/docs/developer-program/advertising/raf-api.md#stitchedadhandledeventmsg-as-object-player-as-object-as-roassociativearray
