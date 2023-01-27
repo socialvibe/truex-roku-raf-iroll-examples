@@ -14,7 +14,6 @@ import fs from 'fs/promises';
 import yargs from 'yargs';
 import fetch from 'node-fetch';
 
-const defaultTADuration = 20;
 const defaultPreviewType = 'raf-ssai-sponsored-ad-break';
 const defaultTrueXAdTag = 'https://qa-get.truex.com/50f0b0944f3a826e6d73c8895cb868fb2af0171c/vast/connected_device/inline?network_user_id=truex_engagement_test_user_001';
 
@@ -118,7 +117,7 @@ async function resolvePreviewConfig(opts: Options): Promise<PreviewConfiguration
   return {
     type: defaultPreviewType,
     ad: {
-      duration: 15, // choice_card video duration used in the sample video
+      duration: 15.6, // choice_card video duration used in the sample video
       streamFormat: 'iroll',
       adserver: 'no_url_imported_ad',
       adId: `truex-${randomUUID()}`,
@@ -181,15 +180,6 @@ function copyAppSources(): TaskFunction {
     copyTask({ dest: `${dest}/source`,     paths: [ 'source/**/*' ] }),
     copyTask({ dest: `${dest}/libs`,       paths: [ 'libs/**/*' ] }),
     copyTask({ dest,                       paths: [ 'manifest' ] }),
-    // truex components import
-    // copyTask({
-    //   dest: `${dest}/components/infillion`,
-    //   paths: [ resolve(truexLibraryBasePath, 'components/infillion/**/*') ],
-    // }),
-    // copyTask({
-    //   dest: `${dest}/res`,
-    //   paths: [ resolve(truexLibraryBasePath, 'res/**/*') ]
-    // }),
   );
 }
 
@@ -213,7 +203,7 @@ async function updateManifest(version: string): Promise<void> {
   await fs.writeFile(
     `./out/app/manifest`,
     stripIndent`
-      title=Infillion // BlueScript Engagement // Reference App
+      title=Infillion // RAF SSAI Example
       subtitle=Sample App
       major_version=${major}
       minor_version=${minor}
