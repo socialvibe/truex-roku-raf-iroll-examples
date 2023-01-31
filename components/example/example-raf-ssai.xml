@@ -5,7 +5,6 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
 
-  <script type="text/brightscript" uri="pkg:/components/example/example-raf-common.brs" />
   <script type="text/brightscript" uri="pkg:/components/example/example-raf-ssai.brs" />
 
   <children>

@@ -6,9 +6,9 @@
   xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
 
   <interface>
-    <field id="adPods" type="array" />
     <field id="view" type="node" />
     <field id="video" type="node" />
+    <field id="truexAdUrl" type="string" />
     <field id="wrapperEvent" type="assocarray" />
   </interface>
 
@@ -16,6 +16,7 @@
   <script type="text/brightscript" uri="pkg:/components/utils/types.brs" />
   <script type="text/brightscript" uri="pkg:/components/utils/math.brs" />
   <script type="text/brightscript" uri="pkg:/components/example/raf-ssai-task.brs" />
+  <script type="text/brightscript" uri="pkg:/components/example/raf-ssai-common.brs" />
   <script type="text/brightscript" uri="pkg:/components/example/truex-helper.brs" />
 
   <script type="text/brightscript">

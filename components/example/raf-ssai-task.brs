@@ -7,17 +7,17 @@ function runInBackground()
   m.raf.setDebugOutput(true)
   m.raf.setTrackingCallback(handleRAFTrackingEvent, m.top)
 
-  playStitchedContentWithAds(m.top.adPods, m.top.video)
+  playStitchedContentWithAds(m.top.video, m.top.truexAdUrl)
 
   reset()
 end function
 
-function playStitchedContentWithAds(adPods_ As Object, video_ as Object) as Void
+function playStitchedContentWithAds(video_ as Object, truexAdUrl_ as String) as Void
   trace("playStitchedContentWithAds() -- raf version: " + m.raf.getLibVersion())
 
-  m.adPods = adPods_
+  m.adPods = resolveAdPods(truexAdUrl_)
   m.video = video_
-  m.raf.stitchedAdsInit(adPods_)
+  m.raf.stitchedAdsInit(m.adPods)
 
   port_ = CreateObject("roMessagePort")
 

@@ -9,9 +9,9 @@ function startExample() as Boolean
 
   m.raf = m.top.createChild("RAFSSAITask")
   m.raf.observeFieldScoped("wrapperEvent", "handleRAFWrapperEvent")
-  m.raf.adPods = resolveAdPods(m.data)
   m.raf.view = m.top
   m.raf.video = m.video
+  m.raf.truexAdUrl = m.data["truex-ad-tag"]
   m.raf.control = "RUN"
 
   return true

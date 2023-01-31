@@ -1,4 +1,4 @@
-Roku Bluescript Engagement Ads Integration
+True[X] RAF SSAI Example
 ==========================================
 
 ## Motivation
@@ -6,38 +6,17 @@ Roku Bluescript Engagement Ads Integration
 This project contains sample source code that demonstrates how to integrate true[X]'s Ad with RAF and SSAI.
 
 ## Prerequisites
-- IDE with Roku support ( VSCode or IDEA )
-- Node >= 18
 - Roku device with development mode enabled. Follow [this online guide][roku_device_development_setup] to setup your Roku device for developement. You will need to use Roku's IP and Dev server password.
 
-
-## Getting Started
-
-- Clone Project
-  ```bash
-  git clone git@github.com:socialvibe/truex-bluescript-ads-integration.git
-  ```
-- Change to project directory
-  ```bash
-  cd reference-app-roku
-  ```
-- Install Dependencies ( we use [yarn][yarn_install_guide] )
-  ```bash
-  yarn install
-  ```
 
 ## How to run this example
 Note: Run the following code from the project's dir.
 Note: Please replace <ROKU_DEV_TARGET> and <DEV_PASSWORD> with your actual device ip and password.
 
 ```bash
-yarn just package-and-run \
-  --device-ip=<ROKU_DEV_TARGET> \
-  --device-pass=<DEV_PASSWORD> \
-  --truex-ad-tag="https://qa-get.truex.com/50f0b0944f3a826e6d73c8895cb868fb2af0171c/vast/connected_device/inline?network_user_id=truex_engagement_test_user_001"
+ROKU_DEV_TARGET=<ROKU_DEV_TARGET> DEV_PASSWORD=<ROKU_DEV_TARGET> make install
 ```
 
-Running this script will load TrueX Ad Tag and create a [payload.json][app_payload_example] file containing RAF compatible Ad object.
 In this demo, we use Innovid Iroll Renderer ( distributed with RAF library ) to render TrueX Ad.
 The Ad object will be used to [define AdPod with 4 Ads][adpods_object_creation].
 

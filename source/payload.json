@@ -1,23 +1,7 @@
 {
-  "__comment1": "this is an example of application payload.json file",
-  "__comment2": "the build script will override this file, do not modify it",
   "example": {
     "type": "raf-ssai-sponsored-ad-break",
-    "ad": {
-      "duration": 15.6,
-      "streamFormat": "iroll",
-      "adserver": "no_url_imported_ad",
-      "adId": "truex-[guid]",
-      "tracking": [],
-      "streams": [
-        {
-          "mimetype": "application/json",
-          "width": 16,
-          "height": 9,
-          "bitrate": 0,
-          "url": "[innovid_json_config_url]"
-        }
-      ]
-    }
+    "truex-ad-tag-1": "https://qa-get.truex.com/50f0b0944f3a826e6d73c8895cb868fb2af0171c/vast/connected_device/inline?network_user_id=ROKU_ADS_TRACKING_ID",
+    "truex-ad-tag": "https://qa-get.truex.com/50f0b0944f3a826e6d73c8895cb868fb2af0171c/vast/connected_device/inline?network_user_id=truex_asd_Asdasdasd_Asdasdasd_Adsd"
   }
 }
