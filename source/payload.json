@@ -1,7 +1,6 @@
 {
   "example": {
     "type": "raf-ssai-sponsored-ad-break",
-    "truex-ad-tag-1": "https://qa-get.truex.com/50f0b0944f3a826e6d73c8895cb868fb2af0171c/vast/connected_device/inline?network_user_id=ROKU_ADS_TRACKING_ID",
-    "truex-ad-tag": "https://qa-get.truex.com/50f0b0944f3a826e6d73c8895cb868fb2af0171c/vast/connected_device/inline?network_user_id=truex_asd_Asdasdasd_Asdasdasd_Adsd"
+    "truex-ad-tag": "https://qa-get.truex.com/50f0b0944f3a826e6d73c8895cb868fb2af0171c/vast/connected_device/inline?network_user_id=ROKU_ADS_TRACKING_ID"
   }
 }
