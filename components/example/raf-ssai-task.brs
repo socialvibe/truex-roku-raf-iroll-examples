@@ -15,13 +15,7 @@ end function
 function playStitchedContentWithAds(adPods_ As Object, video_ as Object) as Void
   trace("playStitchedContentWithAds() -- raf version: " + m.raf.getLibVersion())
 
-  ' we save a deep copy of AdPods, because in case where TrueX Ad completed RAF's default implementation supporting TrueX Ad Flow
-  ' will manipulate AdPods and Ad instances
-  ' Another option is to override the following methods with empty function
-  ' Roku_Ads # skipAllAdPods
-  ' Roku_Ads # skipAdsInCurrentPod
-  m.adPods = ParseJson(FormatJson(adPods_))
-
+  m.adPods = adPods_
   m.video = video_
   m.raf.stitchedAdsInit(adPods_)
 
@@ -52,31 +46,36 @@ function playStitchedContentWithAds(adPods_ As Object, video_ as Object) as Void
     ' check if we're rendering a stitched ad which handles the event
     currentAdEvent_ = m.raf.stitchedAdHandledEvent(msg_, player_)
 
-    if currentAdEvent_ <> invalid and currentAdEvent_.evtHandled = true then
-      ' ad handled event
+    ' if msgType_ = "roSGNodeEvent" then
+    '   _ = m.raf.util.infocache
 
-      if currentAdEvent_.adExited then
+    '   ? ""
+    '   ? ""
+    '   ? "node: ";msg_.GetNode();", field: ";msg_.GetField();", value: ";msg_.GetData()
+    '   ? "position: ";_.curplaypos"adindex: ";_.curadindex;", adpodindex: ";_.curadpodindex;", state: ";_.curadstate
+    '   ? ""
+    '   ? ""
+    ' end if
+
+    if currentAdEvent_ <> invalid then
+      if currentAdEvent_.evtHandled and currentAdEvent_.adExited then
         trace("playStitchedContentWithAds() - User exited ad view, returning to content selection")
         playContent_ = false
       end if
 
       currentAdInfo_ = findCurrentAdInfo(m.adPods, currentAdEvent_)
 
-      ' ? ""
-      ' ? "node: ";msg_.GetNode();", field: ";msg_.GetField();", data: ";msg_.GetData()
-      ' ? "isTrueXAdEvent: ";_isTrueXAdEvent(msg_, currentAdInfo_)
-      ' ? ""
-
       if _isTrueXAdEvent(msg_, currentAdInfo_) then
         if m.truex = invalid then
-          m.truex = _TrueXAdHelper(m.video, currentAdInfo_)
+          m.truex = _TrueXAdHelper(m.raf, findCurrentAdInfo(m.adPods, currentAdEvent_))
         end if
 
         m.truex.handleTrueXAdEvent(msg_, currentAdInfo_)
+      end if
 
-        if m.truex.adEnded then
-          m.truex = invalid
-        end if
+      if currentAdEvent_.adCompleted and m.truex <> invalid and not(m.truex.isSameAd(currentAdInfo_)) then
+        m.truex.reset()
+        m.truex = invalid
       end if
     else
       ' no current ad, the ad did not handle event, fall through to default event handling
@@ -144,8 +143,7 @@ function findCurrentAdInfo(adPods_ as Object, adEventInfo_ as Object) as Dynamic
 
   currentAdPod_ = adPods_[_Math_Max(0, adEventInfo_.adpodindex - 1)]
 
-  ' truex ad should be the first ad in Ad break.
-  if currentAdPod_ = invalid or adEventInfo_.adindex > 1 then
+  if currentAdPod_ = invalid then
     return invalid
   end if
 

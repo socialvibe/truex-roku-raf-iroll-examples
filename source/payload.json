@@ -1,6 +1,23 @@
 {
+  "__comment1": "this is an example of application payload.json file",
+  "__comment2": "the build script will override this file, do not modify it",
   "example": {
-    "type": "raf-ssai",
-    "duration": 30
+    "type": "raf-ssai-sponsored-ad-break",
+    "ad": {
+      "duration": 15.6,
+      "streamFormat": "iroll",
+      "adserver": "no_url_imported_ad",
+      "adId": "truex-[guid]",
+      "tracking": [],
+      "streams": [
+        {
+          "mimetype": "application/json",
+          "width": 16,
+          "height": 9,
+          "bitrate": 0,
+          "url": "[innovid_json_config_url]"
+        }
+      ]
+    }
   }
 }
