@@ -6,7 +6,7 @@ function _TrueXAdHelper(raf_ as Object, currentAdInfo_ as Object) as Object
   ' - Roku_Ads # skipAdsInCurrentPod
   if raf_.__originalSkipAllAdPods = invalid then
     raf_.__originalSkipAllAdPods = raf_.skipAllAdPods
-    raf_.__skipAdsInCurrentPod = raf_.skipAdsInCurrentPod
+    raf_.__originalSkipAdsInCurrentPod = raf_.skipAdsInCurrentPod
 
     raf_.skipAllAdPods = sub(_ignore = invalid)
     end sub
