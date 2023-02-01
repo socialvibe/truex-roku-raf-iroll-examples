@@ -1,8 +1,8 @@
-function resolveAdPods(truexAdUrl_ as Object) as Object
+function resolveAdPods(truexTagUrl_ as Object) as Object
   di_ = CreateObject("roDeviceInfo")
 
-  truexAd1_ = resolveInteractiveAd(truexAdUrl_)
-  truexAd2_ = resolveInteractiveAd(truexAdUrl_)
+  truexAd1_ = resolveInteractiveAd(truexTagUrl_)
+  truexAd2_ = resolveInteractiveAd(truexTagUrl_)
 
   adPodDuration_ = truexAd1_.duration + 29.2 + 30.3 + 32.2
 
@@ -91,17 +91,17 @@ function handleRAFWrapperEvent(evt_ as Object) as Void
   m.top.wrapperEvent = wrapperEvent_
 end function
 
-function resolveInteractiveAd(truexAdUrl_ as String) as Object
+function resolveInteractiveAd(truexTagUrl_ as String) as Object
   di_ = CreateObject("roDeviceInfo")
 
   ' resolve macro
-  truexAdUrl_ = truexAdUrl_.Replace("ROKU_ADS_TRACKING_ID", Roku_Ads().util.GetRIDA())
+  truexTagUrl_ = truexTagUrl_.Replace("ROKU_ADS_TRACKING_ID", Roku_Ads().util.GetRIDA())
 
   ' make ad request
   adRequest_ = CreateObject("roUrlTransfer")
   adRequest_.SetCertificatesFile("common:/certs/ca-bundle.crt")
   adRequest_.InitClientCertificates()
-  adRequest_.SetUrl(truexAdUrl_)
+  adRequest_.SetUrl(truexTagUrl_)
   adRequest_.SetRequest("GET")
   adRequest_.RetainBodyOnError(true)
   adResponse_ = adRequest_.GetToString()

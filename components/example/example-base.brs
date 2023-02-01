@@ -18,23 +18,6 @@ function init() as Void
   m.wrapperEvents = []
 end function
 
-function getLoggingCategory() as String
-  if _isEmpty(m.top.loggingCat) then
-    re = CreateObject("roRegex", "([A-Z][a-z0-9\_]{1,}|[A-Z]{1,}(?=[A-Z][a-z0-9\_]))", "g")
-
-    matches_ = re.matchAll(m.top.subtype())
-    result_ = []
-
-    for each _ in matches_
-      result_.push(_[0])
-    end for
-
-    m.top.loggingCat = result_.join(" / ")
-  end if
-
-  return m.top.loggingCat
-end function
-
 ' @interface
 function start(_ as Object) as Void
   if m.top.state <> "not_started" then

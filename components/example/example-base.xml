@@ -9,7 +9,7 @@
     <field id="wrapperEvent" type="assocarray" alwaysNotify="true" />
     <field id="state" type="string" />
     <field id="error" type="assocarray" alwaysNotify="true" />
-    <field id="loggingCat" type="string" />
+    <field id="event" type="assocarray" alwaysNotify="true" />
 
     <function name="start" />
     <function name="unload" />

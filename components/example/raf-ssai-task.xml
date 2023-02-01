@@ -8,8 +8,9 @@
   <interface>
     <field id="view" type="node" />
     <field id="video" type="node" />
-    <field id="truexAdUrl" type="string" />
+    <field id="truexTagUrl" type="string" />
     <field id="wrapperEvent" type="assocarray" />
+    <field id="event" type="assocarray" />
   </interface>
 
   <script type="text/brightscript" uri="pkg:/components/utils/trace.brs" />

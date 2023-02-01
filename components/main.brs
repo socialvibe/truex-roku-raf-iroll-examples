@@ -1,8 +1,8 @@
 sub init()
   m.ready = true
   m.loggerCat = "Main"
-  ' example view
-  m.exampleView = invalid
+  ' current page view
+  m.currentView = invalid
   ' example config
   ' @see getPayload() example
   m.example = invalid
@@ -44,18 +44,28 @@ sub showExample(config_)
   sgScreen_ = m.top.currentDesignResolution
 
   view_ = createExampleComponentView(config_.type)
+  view_.observeFieldScoped("event", "handleExampleEvent")
   view_.callFunc("start", {
     data: config_,
     size: { w: sgScreen_.width, h: sgScreen_.height }
   })
 
-  m.top.appendChild(view_)
-
-  m.exampleView = view_
+  setCurrentView(view_)
 end sub
 
 sub showExamplesScreen()
-  trace("showExamples()")
+  trace("showExamplesScreen()")
+
+  sgScreen_ = m.top.currentDesignResolution
+
+  view_ = CreateObject("roSGNode", "Examples")
+  view_.observeFieldScoped("event", "handleExamplesScreenEvent")
+  view_.callFunc("start", {
+    examples: m.examples,
+    size: { w: sgScreen_.width, h: sgScreen_.height }
+  })
+
+  setCurrentView(view_)
 end sub
 
 function createExampleComponentView(type_ as string) as dynamic
@@ -67,6 +77,40 @@ function createExampleComponentView(type_ as string) as dynamic
 
   return result_
 end function
+
+sub setCurrentView(view_ as Dynamic)
+  if m.currentView <> invalid then
+    ' release
+    m.currentView.callFunc("unload", {})
+    ' remove from the stage
+    m.top.removeChild(m.currentView)
+  end if
+
+  m.currentView = view_
+
+  if view_ <> invalid then
+    m.top.appendChild(view_)
+  end if
+end sub
+
+sub handleExamplesScreenEvent(msg_ as Object)
+  evt_ = msg_.GetData()
+
+  trace("handleExamplesScreenEvent()", evt_)
+
+  if evt_.type = "select" then
+    showExample(evt_.data)
+  end if
+end sub
+
+sub handleExampleEvent(msg_ as Object)
+  evt_ = msg_.GetData()
+
+  if evt_.type = "exit" then
+    trace(Substitute("handleExampleEvent() -- type: exit, reason: {0}", _asString(evt_.reason)))
+    showExamplesScreen()
+  end if
+end sub
 
 sub traceFocusedElement()
   focused_ = m.top.focusedChild

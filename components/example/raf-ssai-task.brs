@@ -7,15 +7,19 @@ function runInBackground()
   m.raf.setDebugOutput(true)
   m.raf.setTrackingCallback(handleRAFTrackingEvent, m.top)
 
-  playStitchedContentWithAds(m.top.video, m.top.truexAdUrl)
+  playStitchedContentWithAds(m.top.video, m.top.truexTagUrl)
+
+  if m.exitEvent <> invalid then
+    m.top.event = m.exitEvent
+  end if
 
   reset()
 end function
 
-function playStitchedContentWithAds(video_ as Object, truexAdUrl_ as String) as Void
+function playStitchedContentWithAds(video_ as Object, truexTagUrl_ as String) as Void
   trace("playStitchedContentWithAds() -- raf version: " + m.raf.getLibVersion())
 
-  m.adPods = resolveAdPods(truexAdUrl_)
+  m.adPods = resolveAdPods(truexTagUrl_)
   m.video = video_
   m.raf.stitchedAdsInit(m.adPods)
 
@@ -61,6 +65,7 @@ function playStitchedContentWithAds(video_ as Object, truexAdUrl_ as String) as 
       if currentAdEvent_.evtHandled and currentAdEvent_.adExited then
         trace("playStitchedContentWithAds() - User exited ad view, returning to content selection")
         playContent_ = false
+        m.exitEvent = { type: "exit", reason: "back" }
       end if
 
       currentAdInfo_ = findCurrentAdInfo(m.adPods, currentAdEvent_)

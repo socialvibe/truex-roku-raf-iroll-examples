@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<component name="Main" extends="Scene" 
+<component name="Main" extends="Scene"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
@@ -11,6 +11,7 @@
 
     <script type="text/brightscript" uri="pkg:/components/main.brs" />
     <script type="text/brightscript" uri="pkg:/components/utils/trace.brs" />
+    <script type="text/brightscript" uri="pkg:/components/utils/types.brs" />
 
     <children>
         <Rectangle

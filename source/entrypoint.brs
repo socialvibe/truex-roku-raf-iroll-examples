@@ -1,4 +1,4 @@
-sub main() 
+sub main()
     m.payload = ParseJson(ReadAsciiFile("pkg:/source/payload.json"))
     m.port = CreateObject("roMessagePort")
 
@@ -6,7 +6,6 @@ sub main()
     m.screen.SetMessagePort(m.port)
     m.screen.Show()
 
-    ? m.payload
     m.scene = m.screen.CreateScene("Main")
     m.scene.callFunc("setup", m.payload)
 

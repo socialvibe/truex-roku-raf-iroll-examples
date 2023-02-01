@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="Examples" extends="Group" >
+  <interface>
+    <field id="event" type="assocarray" />
+
+    <function name="start" />
+    <function name="unload" />
+  </interface>
+
+  <script type="text/brightscript" uri="pkg:/components/examples.brs" />
+  <script type="text/brightscript" uri="pkg:/components/utils/trace.brs" />
+  <script type="text/brightscript" uri="pkg:/components/utils/types.brs" />
+
+  <children>
+    <Rectangle
+      id="_bg"
+      color="0x343434"
+      width="1920"
+      height="1080"
+      translation="[0, 0]"
+      />
+
+    <LayoutGroup
+      id="_examplesContainer"
+      translation="[960,540]"
+      layoutDirection="vert"
+      horizAlignment="center"
+      vertAlignment="center">
+
+      <LabelList
+        id="_examples"
+        itemSize="[900,100]" />
+    </LayoutGroup>
+  </children>
+</component>
