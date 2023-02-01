@@ -42,22 +42,22 @@ function _TrueXAdHelper(raf_ as Object, currentAdInfo_ as Object) as Object
     handleTrueXAdEvent: _TrueXAdHelper_HandleTrueXAdEvent,
     reset: _TrueXAdHelper_Reset,
 
-    _exitPlayback: __TrueXAdHelper_ExitPlayback,
-    _skipCurrentAdPodAndContinue: __TrueXAdHelper_SkipCurrentAdPodAndContinue,
-    _skipTrueXAdAndContinue: __TrueXAdHelper_SkipTrueXAdAndContinue,
+    _exitPlayback: _TrueXAdHelper_ExitPlayback,
+    _skipCurrentAdPodAndContinue: _TrueXAdHelper_SkipCurrentAdPodAndContinue,
+    _skipTrueXAdAndContinue: _TrueXAdHelper_SkipTrueXAdAndContinue,
 
-    _isVideoEvent: __TrueXAdHelper_IsVideoEvent,
-    _isInnovidRendererEvent: __TrueXAdHelper_IsInnovidRendererEvent,
+    _isVideoEvent: _TrueXAdHelper_IsVideoEvent,
+    _isInnovidRendererEvent: _TrueXAdHelper_IsInnovidRendererEvent,
 
-    _handleAdStarted: __TrueXAdHelper_HandleAdStarted,
-    _handleAdEnded: __TrueXAdHelper_HandleAdEnded,
-    _handleVideoEvent: __TrueXAdHelper_HandleVideoEvent,
+    _handleAdStarted: _TrueXAdHelper_HandleAdStarted,
+    _handleAdEnded: _TrueXAdHelper_HandleAdEnded,
+    _handleVideoEvent: _TrueXAdHelper_HandleVideoEvent,
 
-    _stopVideoPlayback: __TrueXAdHelper_StopVideoPlayback,
-    _restartVideoPlayback: __TrueXAdHelper_RestartVideoPlayback,
+    _stopVideoPlayback: _TrueXAdHelper_StopVideoPlayback,
+    _restartVideoPlayback: _TrueXAdHelper_RestartVideoPlayback,
 
-    _isObject: __TrueXAdHelper_IsObject,
-    _isString: __TrueXAdHelper_IsString,
+    _isObject: _TrueXAdHelper_IsObject,
+    _isString: _TrueXAdHelper_IsString,
   }
 end function
 
@@ -110,7 +110,7 @@ sub _TrueXAdHelper_IsSameAd(adInfo_ as Object) as boolean
   return adInfo_.adIndex = m.adIndex and adInfo_.adPodIndex = m.adPodIndex
 end sub
 
-sub __TrueXAdHelper_SkipTrueXAdAndContinue()
+sub _TrueXAdHelper_SkipTrueXAdAndContinue()
   ' mark the current ad as 'viewed'
   m.ad.viewed = true
 
@@ -123,12 +123,12 @@ sub __TrueXAdHelper_SkipTrueXAdAndContinue()
   m._restartVideoPlayback(nextAdStartPosition_)
 end sub
 
-sub __TrueXAdHelper_ExitPlayback()
+sub _TrueXAdHelper_ExitPlayback()
   ' handled in the event loop - `if currentAd_.adExited = true then ... end if`
   ' this event fired when the user exited choice_card by pressing `Back` button
 end sub
 
-sub __TrueXAdHelper_SkipCurrentAdPodAndContinue()
+sub _TrueXAdHelper_SkipCurrentAdPodAndContinue()
   nextContentPortionStartPosition_ = m.adPod.rendertime
 
   ' mark this AdPod as `viewed`
@@ -145,7 +145,7 @@ sub __TrueXAdHelper_SkipCurrentAdPodAndContinue()
   m._restartVideoPlayback(nextContentPortionStartPosition_)
 end sub
 
-sub __TrueXAdHelper_StopVideoPlayback() as Void
+sub _TrueXAdHelper_StopVideoPlayback() as Void
   trace("truex # _stopPlayback()")
 
   ' stop player
@@ -153,7 +153,7 @@ sub __TrueXAdHelper_StopVideoPlayback() as Void
   m.rafPlayerWrapper.Stop()
 end sub
 
-sub __TrueXAdHelper_HandleAdStarted()
+sub _TrueXAdHelper_HandleAdStarted()
   trace("truex # handleAdStarted()")
 
   m.rafIrollInstance = m.raf.util.infocache.curadrenderer.instance
@@ -164,12 +164,12 @@ sub __TrueXAdHelper_HandleAdStarted()
   m._stopVideoPlayback()
 end sub
 
-sub __TrueXAdHelper_HandleAdEnded()
+sub _TrueXAdHelper_HandleAdEnded()
   trace("truex # handleAdEnded()")
   m.adEnded = true
 end sub
 
-sub __TrueXAdHelper_HandleVideoEvent(msg_ as Object)
+sub _TrueXAdHelper_HandleVideoEvent(msg_ as Object)
   field_ = msg_.GetField()
 
   if field_ = "position" and not(m.adStarted) then
@@ -177,7 +177,7 @@ sub __TrueXAdHelper_HandleVideoEvent(msg_ as Object)
   end if
 end sub
 
-sub __TrueXAdHelper_RestartVideoPlayback(positionInSeconds_ as Float)
+sub _TrueXAdHelper_RestartVideoPlayback(positionInSeconds_ as Float)
   trace(Substitute("truex # _restartVideoPlayback()", positionInSeconds_.ToStr()))
 
   m.rafIrollInstance.ssai.restartPosition = positionInSeconds_
@@ -188,19 +188,19 @@ sub __TrueXAdHelper_RestartVideoPlayback(positionInSeconds_ as Float)
   m.rafPlayerWrapper.Seek(positionInSeconds_ * 1000)
 end sub
 
-function __TrueXAdHelper_IsInnovidRendererEvent(msg_ as Object) as Boolean
+function _TrueXAdHelper_IsInnovidRendererEvent(msg_ as Object) as Boolean
   return type(msg_) = "roSGNodeEvent" and msg_.GetNode().StartsWith("iroll-") and msg_.GetField() = "event"
 end function
 
-function __TrueXAdHelper_IsObject(value_ as Dynamic) as Boolean
+function _TrueXAdHelper_IsObject(value_ as Dynamic) as Boolean
   return type(value_) <> "<uninitialized>" and GetInterface(value_, "ifAssociativeArray") <> invalid
 end function
 
-function __TrueXAdHelper_IsString(value_ as Dynamic) as Boolean
+function _TrueXAdHelper_IsString(value_ as Dynamic) as Boolean
   return type(value_) <> "<uninitialized>" and GetInterface(value_, "ifString") <> invalid
 end function
 
-function __TrueXAdHelper_IsVideoEvent(msg_ as Object) as Boolean
+function _TrueXAdHelper_IsVideoEvent(msg_ as Object) as Boolean
   if type(msg_) <> "roSGNodeEvent" then
     return false
   end if
