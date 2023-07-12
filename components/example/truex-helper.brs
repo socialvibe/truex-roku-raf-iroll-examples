@@ -178,7 +178,7 @@ sub _TrueXAdHelper_HandleVideoEvent(msg_ as Object)
 end sub
 
 sub _TrueXAdHelper_RestartVideoPlayback(positionInSeconds_ as Float)
-  trace(Substitute("truex # _restartVideoPlayback()", positionInSeconds_.ToStr()))
+  trace(Substitute("truex # _restartVideoPlayback(position: {0})", positionInSeconds_.ToStr()))
 
   m.rafIrollInstance.ssai.restartPosition = positionInSeconds_
   m.rafIrollInstance.ssai.restarting = true
