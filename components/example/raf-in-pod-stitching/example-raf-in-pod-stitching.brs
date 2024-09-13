@@ -1,6 +1,6 @@
 ' @override
 function startExample() as Boolean
-  ? m.data
+  trace("startExample()")
 
   m.rafTask = CreateObject("roSGNode", "RAFInPodStitchingTask")
   m.rafTask.view = m.top
