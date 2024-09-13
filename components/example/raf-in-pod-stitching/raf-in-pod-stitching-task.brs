@@ -146,26 +146,3 @@ function loadTrueXRenderer() as Boolean
 
   return false
 end function
-
-function playStitchedAdPod(adContainer_ as Object, adPod_ as Object, raf_ as Object) as boolean
-  ? "playStitchedAdPod() -- started"
-
-  adPodInfo_ = prepareAdPodInfo(adPod_)
-  shouldSkipAdPod_ = false
-  userExited_ = false
-
-  if adPodInfo_.truexAd <> invalid then
-    shouldSkipAdPod_ = playTrueXAd(adContainer_, adPodInfo_.truexAd)
-  end if
-
-  if not(shouldSkipAdPod_) then
-    raf_.importAds(adPodInfo_.adPods)
-    raf_.enableInPodStitching(true)
-
-    userExited_ = raf_.showAds(adPodInfo_.adPods, invalid, adContainer_)
-  end if
-
-  ? "playStitchedAdPod() -- ended"
-
-  return userExited_
-end function
