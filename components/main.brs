@@ -72,7 +72,7 @@ function createExampleComponentView(type_ as string) as dynamic
   result_ = invalid
 
   if type_ = "raf-ssai-sponsored-ad-break" then
-    result_ = CreateObject("roSGNode", "ExampleRAFSSAI")
+    result_ = CreateObject("roSGNode", "ExampleRAFSSAIInnovid")
   else if type_ = "raf-in-pod-stitching" then
     result_ = CreateObject("roSGNode", "ExampleRAFInPodStitching")
   end if

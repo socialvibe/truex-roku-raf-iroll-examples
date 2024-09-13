@@ -16,9 +16,9 @@
   <script type="text/brightscript" uri="pkg:/components/utils/trace.brs" />
   <script type="text/brightscript" uri="pkg:/components/utils/types.brs" />
   <script type="text/brightscript" uri="pkg:/components/utils/math.brs" />
-  <script type="text/brightscript" uri="pkg:/components/example/raf-ssai/raf-ssai-task.brs" />
-  <script type="text/brightscript" uri="pkg:/components/example/raf-ssai/raf-ssai-common.brs" />
-  <script type="text/brightscript" uri="pkg:/components/example/raf-ssai/truex-helper.brs" />
+  <script type="text/brightscript" uri="pkg:/components/example/raf-ssai-innovid/raf-ssai-task.brs" />
+  <script type="text/brightscript" uri="pkg:/components/example/raf-ssai-innovid/raf-ssai-common.brs" />
+  <script type="text/brightscript" uri="pkg:/components/example/raf-ssai-innovid/truex-helper.brs" />
 
   <script type="text/brightscript">
     <![CDATA[

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<component name="ExampleRAFSSAI" extends="ExampleBase"
+<component name="ExampleRAFSSAIInnovid" extends="ExampleBase"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
 
-  <script type="text/brightscript" uri="pkg:/components/example/raf-ssai/example-raf-ssai.brs" />
+  <script type="text/brightscript" uri="pkg:/components/example/raf-ssai-innovid/example-raf-ssai-innovid.brs" />
 
   <children>
     <Video id="_video" />
