@@ -3,7 +3,7 @@ True[X] RAF SSAI Example
 
 ## Motivation
 
-This project contains sample source code that demonstrates how to integrate true[X]'s Ad with RAF and SSAI.
+This project contains sample source code that demonstrates how to integrate true[X]'s Ad with RAF and SSAI
 
 ## Prerequisites
 - Roku device with development mode enabled. Follow [this online guide][roku_device_development_setup] to setup your Roku device for developement. You will need to use Roku's IP and Dev server password.
@@ -11,10 +11,10 @@ This project contains sample source code that demonstrates how to integrate true
 
 ## How to run this example
 Note: Run the following code from the project's dir.
-Note: Please replace <ROKU_DEV_TARGET> and <DEV_PASSWORD> with your actual device ip and password.
+Note: Please replace <ROKU_DEV_TARGET> and <DEVPASSWORD> with your actual device ip and password.
 
-```bash
-ROKU_DEV_TARGET=<ROKU_DEV_TARGET> DEV_PASSWORD=<ROKU_DEV_TARGET> make install
+```shell
+ROKU_DEV_TARGET=<ROKU_DEV_TARGET> DEVPASSWORD=<ROKU_DEV_TARGET> make install
 ```
 
 In this demo, we use Innovid Iroll Renderer ( distributed with RAF library ) to render TrueX Ad.
@@ -23,7 +23,10 @@ The Ad object will be used to [define AdPod with 4 Ads][adpods_object_creation].
 The first ad will be TrueX Ad and 3 additional video ads.
 Also this app uses [a prepared video][video_url] to simulate SSAI stream with ads.
 
-## Integration
+## RAF CSAI with `.enableInPodStitching(true)` option
+
+
+## RAF SSAI
 
 ### Disabling "TrueX Ad Flow" support methods in RAF
 RAF has two special methods to support TrueX Ad Flow - `Roku_Ads().skipAllAdPods(skipcardAd_)` and `Roku_Ads().skipAdsInCurrentPod()`.

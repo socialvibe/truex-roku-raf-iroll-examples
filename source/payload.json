@@ -3,8 +3,1134 @@
     {
       "id": "example-1",
       "type": "raf-ssai-sponsored-ad-break",
-      "title": "True[X] RAF SSAI Example",
+      "title": "TrueX RAF SSAI Example",
       "truexTagUrl": "https://qa-get.truex.com/50f0b0944f3a826e6d73c8895cb868fb2af0171c/vast/connected_device/inline?network_user_id=ROKU_ADS_TRACKING_ID"
+    },
+    {
+      "id": "truex-raf-in-pod-stitching-example",
+      "type": "raf-in-pod-stitching",
+      "title": "TrueX RAF + In Pod Stitching",
+      "truex_ad_innovid": {
+        "adid": "1ddorp",
+        "adserver": "https://rtr.innovid.com/r1.669a80912b2842.51340973;cb=%5Btimestamp%5D",
+        "adsystem": "Innovid Ads",
+        "adtitle": "Pinterest - Test Creative, Brand, Bold, Q2-Q3, 2021",
+        "companionads": [
+          {
+            "height": 9,
+            "mimetype": "application/json",
+            "provider": "innovid",
+            "tracking": [],
+            "url": "https://s-video.innovid.com/tags/static.innovid.com/ctv-generic/1ddorp.json?cb=eb5b9fe0-0b45-04a3-361d-4f184c95b124&ivc=aa%3D30%26bd%3D%26bg%3Dhttp%253A%252F%252Fmedia.truex.com%252Fimage_assets%252F2020-09-02%252F060bb928-f8d8-4af6-8ed1-e7ba2c3498ed.jpg%26f%3D%26ib%3Dhttp%253A%252F%252Fmedia.truex.com%252Fimage_assets%252F2020-09-02%252Fd45649de-231e-40c8-bb77-deb4507821e3.png%26ih%3D916%26iw%3D505%26ix%3D39%26iy%3D235%26n%3D%26p%3Dbid_info%253D0-9UN5Af9qHv2-2HfsgkpB39YyydnSYqt2S1Z4tfrQM3kjhAqTk4VV23jxfxwcggbwSSbtd81DwZyoC8S92pT2YrWytiZxmh2jdbd2xNuZbhKuudeSNjb8Sx9RGtqrJKGP4pguBt1cCJ9TXwCC3TB1EPypaWeKEyXmjGsxADqK1RkJVwt14ECnYq7CXXWr7EFK744zvT6J5gUcjKE7wWfiR7HHQGKWT2fjAD5425fjTfN2PV7SmEvaymmkx6aB5gPqHfk1tvhDzTHK3XWTSLS%2526campaign_id%253D42664%2526creative_id%253D29199%2526ctv%253D1%2526currency_amount%253D1%2526env%25255B%25255D%253Dbrightscript%2526impression_signature%253Db8c4f8a6d90c4dad667f88a15f0692fae9f6789e7d70aad4df52d2b501c9b18e%2526impression_timestamp%253D1721342977.1167045%2526initials%253D0%2526internal_referring_source%253DpCm8GHtQ9IqbLPgLnMurfA%2526ip%253D71.83.212.197%2526multivariate%25255BFAP-460%25255D%253DoldTT%2526multivariate%25255BNBCU_50_50%25255D%253Dcontrol%2526multivariate%25255Bcontainer_ttqq_yesno_button_placement%25255D%253Dcontrol%2526multivariate%25255Bctv_footer_test%25255D%253DT0%2526multivariate%25255Bctv_footer_test_a744dee4c7908c475fd3920ac6616470c4317e8c%25255D%253DT0%2526multivariate%25255Bctv_footer_test_dbd6f9f154dc39f9fc4888317c6e3c9d74f7c971%25255D%253DT0%2526multivariate%25255Bctv_relevance_enabled%25255D%253DT0%2526multivariate%25255Bctv_xtended_view%25255D%253DT0%2526multivariate%25255Btruex_first_experiment%25255D%253Dcontrol%2526multivariate%25255Btvml_cc_test%25255D%253DT0%2526network_user_id%253D1f85be60-a358-5fda-8b62-12a387b645f2%2526placement_hash%253D5ee88467a5797972f1f04407570a031086c3b68e%2526referrer%253D%2526session_id%253DlMsetG9xsqQqsGCdE1dSjA%2526stream_position%253Dmidroll%2526stream_position%253Dmidroll%2526user_agent%253DRoku%25252FDVP-13.1%252B%25252813.1.4.1510-AE%252529%2526vault%253D0-mJ2JQN1vELK-smMMZxV7jb6W9VsffSM5whtRFe8NyCfy8JbhBP9UiP6yPqoCcHerVhJgF23vS4E59H7RXwGEF9CC7GErgiSsy3D9amWkYxBtkkYDKMGGz5URzhCQ8ckjnTtwWdwDRbwFoxptfoq2xyjyta81dk5MnYCK1nydD253RRVwYdnGaZkp1okwXsy1Pi7nP3G1Ew78mQtzn33ahRW3CxqQYSyWDSFbvyeZA2AkDaCpyycMJ2tADeCA32TyjwhD62vFsrxnsDzesH%26pos%3Dpreroll%26product%3Dsponsored_ad_break%26s%3Dhttp%253A%252F%252Fmeasure.truex.com%26sec%3D30%26sk%3D%26survey_config_url%3D%26vo%3Dhttp%253A%252F%252Fmedia.truex.com%252Faudio_assets%252F2020-09-02%252F6e16da95-6f7c-4cd5-8500-ea499afd52d2.mp3%26wb%3Dhttp%253A%252F%252Fmedia.truex.com%252Fimage_assets%252F2020-09-02%252F2dc1e42b-471a-4b92-a4f5-de3980246288.png%26wh%3D916%26ww%3D505%26wx%3D485%26wy%3D235",
+            "width": 16
+          }
+        ],
+        "creativeadid": "",
+        "creativeid": "",
+        "duration": 5,
+        "requestid": "10636488-db9a-4d77-89d9-b5e20048ca77",
+        "streamformat": "mp4",
+        "streams": [
+          {
+            "bitrate": 1800,
+            "height": 720,
+            "mimetype": "video/mp4",
+            "provider": "innovid",
+            "url": "https://s3.amazonaws.com/media.truex.com/m/video/truexloadingplaceholder-5s.mp4",
+            "width": 1280
+          }
+        ],
+        "tracking": [
+          {
+            "event": "Impression",
+            "time": 0,
+            "triggered": false,
+            "url": "https://s.innovid.com/1x1.gif?project_hash=1ifl08&client_id=7832&video_id=1315300&channel_id=4258492&publisher_id=7832&placement_tag_id=0&project_state=2&r=1726196216000&placement_hash=1ddorp&device_id=&action=ctvimp"
+          }
+        ]
+      },
+      "adPod": {
+        "duration": 150,
+        "rendersequence": "preroll",
+        "rendertime": 0,
+        "tracking": [],
+        "viewed": false,
+        "ads": [
+          {
+            "adid": "super_tag",
+            "adparameters": "{\"user_id\":\"3bb4278d-62b2-540c-b3d4-6b2d5b8e59ca\",\"placement_hash\":\"e6a9f22fea580af9b6c993d1f4f5881812126cd5\",\"vast_config_url\":\"get.truex.com/e6a9f22fea580af9b6c993d1f4f5881812126cd5/vast/config?dimension_2=1&ifa=3bb4278d-62b2-540c-b3d4-6b2d5b8e59ca&ifa_type=ppid&ip=24.190.65.83&network_user_id=3bb4278d-62b2-540c-b3d4-6b2d5b8e59ca&roku_device=4200X&roku_device_alternate=4200X&roku_ua=Roku%2FDVP-13.1+%2813.1.4.1510-04%29&stream_id=Sample+use+of+RAF+in+RSG&technologies%5B%5D=layoutJSON&user_agent=Roku%2FDVP-13.1+%2813.1.4.1510-04%29\"}",
+            "adserver": "https://get.truex.com/e6a9f22fea580af9b6c993d1f4f5881812126cd5/vast?dimension_2=1&ifa=3bb4278d-62b2-540c-b3d4-6b2d5b8e59ca&ifa_type=ppid&ip=24.190.65.83&stream_id=Sample+use+of+RAF+in+RSG&renderer_version=1.8.92-99efddb&env%5B%5D=layoutJSON&network_user_id=3bb4278d-62b2-540c-b3d4-6b2d5b8e59ca&roku_device=ROKU_ADS_DEVICE_MODEL&roku_ua=ROKU_ADS_USER_AGENT&roku_device_alternate=4200X&user_agent=Roku/DVP-13.1%20(13.1.4.1510-04)",
+            "adsystem": "trueX",
+            "adtitle": "VAST Super Tag",
+            "companionads": [],
+            "creativeadid": "",
+            "creativeid": "super_tag",
+            "duration": 30,
+            "requestid": "126652ac-2c55-4fd2-bfaf-6ae77bd2efbc",
+            "streamformat": "mp4",
+            "streams": [
+              {
+                "bitrate": 2000,
+                "height": 500,
+                "mimetype": "video/mp4",
+                "provider": "vpaid",
+                "url": "https://media.truex.com/m/video/truexloadingplaceholder-QA-30s.mp4",
+                "width": 750
+              }
+            ],
+            "tracking": []
+          },
+          {
+            "adid": "589582284739462252",
+            "adserver": "https://aax-ott.amazon-adsystem.com/e/dtb/tag/getAd?dur=30&dealId=aps920fcd4e&country=US&src=4032&slotId=51069&slot=d10d178f-63a4-492f-abe6-f58d28f51ef4&appId=6eea141e4f174507a102bf3ed3f1676a&idfa=1f85be60-a358-5fda-8b62-12a387b645f2&us_privacy=&coppa=0&cb=889610582&rating=m2&id=A+New+Crewmate!+The+Musician,+Humming+Brook!&genre=anime&length=1440000",
+            "adsystem": "Amazon",
+            "adtitle": "XCM | POLV OTC Q3 2024 | Dorm Tour Matthew | :30 | English",
+            "clickthrough": "https://aax-us-pdx.amazon-adsystem.com/x/c/RAGA_2A9NZ44ZwQMZh0ARi0AAAGQyAlnXgYAAA_ABgBhcHNfbHR0bF9iaWQxICBhcHNfdHhuX2ltcDEgICBzvXUB/https://www.amazon.com/offtocollege?ref=o_disp_589582284739462252_580854371372106917&tag=dikius-20&aref=gia97CR7qm",
+            "companionads": [],
+            "creativeadid": "589582284739462252",
+            "creativeid": "580854371372106917",
+            "duration": 30,
+            "streamformat": "mp4",
+            "streams": [
+              {
+                "bitrate": 453,
+                "height": 480,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_450Kbs_15fps_48khz_96Kbs_360p.mp4?c=580854371372106917&a=589582284739462252&d=30.133333&br=453&w=854&h=480&ct=-&ca=-",
+                "width": 854
+              },
+              {
+                "bitrate": 25166,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_25000Kbs_30fps_48khz_192Kbs_1080p_H264_high.mp4?c=580854371372106917&a=589582284739462252&d=30.03003&br=25166&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 25146,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_25000Kbs_30fps_48khz_192Kbs_1080p_H264_main.mp4?c=580854371372106917&a=589582284739462252&d=30.03003&br=25146&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 20247,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_20000kbs_autofps_48khz_320Kbs.mp4?c=580854371372106917&a=589582284739462252&d=30.03&br=20247&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 20174,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_20000Kbs_autofps_48khz_320Kbs_1080p_H264_high.mp4?c=580854371372106917&a=589582284739462252&d=30.03&br=20174&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 10112,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_10000kbs_30fps_48khz_320Kbs_1080p.mp4?c=580854371372106917&a=589582284739462252&d=30.03003&br=10112&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 10066,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_10000Kbs_30fps_48khz_320Kbs_1080p_H264_high.mp4?c=580854371372106917&a=589582284739462252&d=30.03003&br=10066&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 4027,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_4000kbs_30fps_48khz_192Kbs_1080p.mp4?c=580854371372106917&a=589582284739462252&d=30.03003&br=4027&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 3987,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_4000Kbs_30fps_48khz_192Kbs_1080p_H264_high.mp4?c=580854371372106917&a=589582284739462252&d=30.03003&br=3987&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 3509,
+                "height": 720,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_3500Kbs_30fps_48khz_128Kbs_720p_H264_high.mp4?c=580854371372106917&a=589582284739462252&d=30.03003&br=3509&w=1280&h=720&ct=-&ca=-",
+                "width": 1280
+              },
+              {
+                "bitrate": 3389,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_3400Kbs_30fps_48khz_192Kbs_1080p_H264_high.mp4?c=580854371372106917&a=589582284739462252&d=30.03003&br=3389&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 2109,
+                "height": 480,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_2100Kbs_30fps_48khz_192Kbs_480p_H264_main.mp4?c=580854371372106917&a=589582284739462252&d=30.03003&br=2109&w=854&h=480&ct=-&ca=-",
+                "width": 854
+              },
+              {
+                "bitrate": 2105,
+                "height": 576,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_2100Kbs_30fps_48khz_192Kbs_576p_H264_high.mp4?c=580854371372106917&a=589582284739462252&d=30.03003&br=2105&w=1024&h=576&ct=-&ca=-",
+                "width": 1024
+              },
+              {
+                "bitrate": 2014,
+                "height": 720,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_2000kbs_30fps_48khz_96Kbs_720p.mp4?c=580854371372106917&a=589582284739462252&d=30.03003&br=2014&w=1280&h=720&ct=-&ca=-",
+                "width": 1280
+              },
+              {
+                "bitrate": 1994,
+                "height": 720,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_2000Kbs_30fps_48khz_192Kbs_720p_H264_high.mp4?c=580854371372106917&a=589582284739462252&d=30.03003&br=1994&w=1280&h=720&ct=-&ca=-",
+                "width": 1280
+              },
+              {
+                "bitrate": 1994,
+                "height": 720,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_2000Kbs_30fps_48khz_96Kbs_720p_H264_high.mp4?c=580854371372106917&a=589582284739462252&d=30.03003&br=1994&w=1280&h=720&ct=-&ca=-",
+                "width": 1280
+              },
+              {
+                "bitrate": 1501,
+                "height": 540,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_1500Kbs_30fps_48khz_192Kbs_540p_H264_high.mp4?c=580854371372106917&a=589582284739462252&d=30.03003&br=1501&w=960&h=540&ct=-&ca=-",
+                "width": 960
+              },
+              {
+                "bitrate": 1496,
+                "height": 576,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_1500Kbs_25fps_48khz_128Kbs_576p_H264_high.mp4?c=580854371372106917&a=589582284739462252&d=30.04&br=1496&w=1024&h=576&ct=-&ca=-",
+                "width": 1024
+              },
+              {
+                "bitrate": 1355,
+                "height": 720,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_1350kbs_30fps_48khz_96Kbs_720p.mp4?c=580854371372106917&a=589582284739462252&d=30.03003&br=1355&w=1280&h=720&ct=-&ca=-",
+                "width": 1280
+              },
+              {
+                "bitrate": 1355,
+                "height": 720,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_1350Kbs_30fps_48khz_96Kbs_720p_H264_high.mp4?c=580854371372106917&a=589582284739462252&d=30.03003&br=1355&w=1280&h=720&ct=-&ca=-",
+                "width": 1280
+              },
+              {
+                "bitrate": 1346,
+                "height": 540,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_1350Kbs_25fps_48khz_128Kbs_540p_H264_main.mp4?c=580854371372106917&a=589582284739462252&d=30.04&br=1346&w=960&h=540&ct=-&ca=-",
+                "width": 960
+              },
+              {
+                "bitrate": 909,
+                "height": 480,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_900Kbs_15fps_48khz_96Kbs_480p.mp4?c=580854371372106917&a=589582284739462252&d=30.133333&br=909&w=854&h=480&ct=-&ca=-",
+                "width": 854
+              },
+              {
+                "bitrate": 907,
+                "height": 480,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_900Kbs_30fps_48khz_96Kbs_480p_H264_baseline.mp4?c=580854371372106917&a=589582284739462252&d=30.03003&br=907&w=854&h=480&ct=-&ca=-",
+                "width": 854
+              },
+              {
+                "bitrate": 749,
+                "height": 432,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_750Kbs_30fps_48khz_192Kbs_432p_H264_high.mp4?c=580854371372106917&a=589582284739462252&d=30.03003&br=749&w=768&h=432&ct=-&ca=-",
+                "width": 768
+              },
+              {
+                "bitrate": 748,
+                "height": 576,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_750Kbs_25fps_48khz_96Kbs_576p_H264_high.mp4?c=580854371372106917&a=589582284739462252&d=30.04&br=748&w=1024&h=576&ct=-&ca=-",
+                "width": 1024
+              },
+              {
+                "bitrate": 606,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_600Kbs_25fps_48khz_128Kbs_360p_H264_baseline.mp4?c=580854371372106917&a=589582284739462252&d=30.04&br=606&w=640&h=360&ct=-&ca=-",
+                "width": 640
+              },
+              {
+                "bitrate": 606,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_600Kbs_30fps_48khz_128Kbs_360p_H264_baseline.mp4?c=580854371372106917&a=589582284739462252&d=30.03003&br=606&w=640&h=360&ct=-&ca=-",
+                "width": 640
+              },
+              {
+                "bitrate": 605,
+                "height": 480,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_600Kbs_15fps_48khz_96Kbs_480p.mp4?c=580854371372106917&a=589582284739462252&d=30.133333&br=605&w=854&h=480&ct=-&ca=-",
+                "width": 854
+              },
+              {
+                "bitrate": 604,
+                "height": 480,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_600Kbs_30fps_48khz_96Kbs_480p_H264_baseline.mp4?c=580854371372106917&a=589582284739462252&d=30.03003&br=604&w=854&h=480&ct=-&ca=-",
+                "width": 854
+              },
+              {
+                "bitrate": 454,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_450Kbs_30fps_48khz_96Kbs_360p_H264_baseline.mp4?c=580854371372106917&a=589582284739462252&d=30.03003&br=454&w=640&h=360&ct=-&ca=-",
+                "width": 640
+              },
+              {
+                "bitrate": 374,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_375Kbs_30fps_48khz_192Kbs_360p_H264_high.mp4?c=580854371372106917&a=589582284739462252&d=30.03003&br=374&w=640&h=360&ct=-&ca=-",
+                "width": 640
+              },
+              {
+                "bitrate": 319,
+                "height": 576,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_320Kbs_25fps_48khz_96Kbs_576p_H264_high.mp4?c=580854371372106917&a=589582284739462252&d=30.04&br=319&w=1024&h=576&ct=-&ca=-",
+                "width": 1024
+              },
+              {
+                "bitrate": 303,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_300Kbs_30fps_48khz_96Kbs_360p_H264_baseline.mp4?c=580854371372106917&a=589582284739462252&d=30.03003&br=303&w=640&h=360&ct=-&ca=-",
+                "width": 640
+              },
+              {
+                "bitrate": 302,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_300Kbs_15fps_48khz_96Kbs_360p.mp4?c=580854371372106917&a=589582284739462252&d=30.133333&br=302&w=640&h=360&ct=-&ca=-",
+                "width": 640
+              },
+              {
+                "bitrate": 263,
+                "height": 180,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/531d85cc-ebc1-472d-b99f-1e80bb3791c7.mp4/mp4_260Kbs_25fps_48khz_64Kbs_180p_H264_baseline.mp4?c=580854371372106917&a=589582284739462252&d=30.04&br=263&w=320&h=180&ct=-&ca=-",
+                "width": 320
+              }
+            ],
+            "tracking": []
+          },
+          {
+            "adid": "589582284739462252",
+            "adserver": "https://aax-ott.amazon-adsystem.com/e/dtb/tag/getAd?dur=30&dealId=aps920fcd4e&country=US&src=4032&slotId=51069&slot=d10d178f-63a4-492f-abe6-f58d28f51ef4&appId=6eea141e4f174507a102bf3ed3f1676a&idfa=1f85be60-a358-5fda-8b62-12a387b645f2&us_privacy=&coppa=0&cb=903918066&rating=m2&id=A+New+Crewmate!+The+Musician,+Humming+Brook!&genre=anime&length=1440000",
+            "adsystem": "Amazon",
+            "adtitle": "XCM | POLV OTC Q3 2024 | Dorm Tour Jared | :30 | English",
+            "clickthrough": "https://aax-us-pdx.amazon-adsystem.com/x/c/RO46KeU-WTimuPW_GP2Yhq8AAAGQyAlozAYAAA_ABgBhcHNfbHR0bF9iaWQxICBhcHNfdHhuX2ltcDEgICBs7M1x/https://www.amazon.com/offtocollege?ref=o_disp_589582284739462252_590427246856257970&tag=dikius-20&aref=xBptyzEeKk",
+            "companionads": [],
+            "creativeadid": "589582284739462252",
+            "creativeid": "590427246856257970",
+            "duration": 30,
+            "streamformat": "mp4",
+            "streams": [
+              {
+                "bitrate": 450,
+                "height": 480,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_450Kbs_15fps_48khz_96Kbs_360p.mp4?c=590427246856257970&a=589582284739462252&d=30.133333&br=450&w=854&h=480&ct=-&ca=-",
+                "width": 854
+              },
+              {
+                "bitrate": 25249,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_25000Kbs_30fps_48khz_192Kbs_1080p_H264_high.mp4?c=590427246856257970&a=589582284739462252&d=30.03003&br=25249&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 25229,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_25000Kbs_30fps_48khz_192Kbs_1080p_H264_main.mp4?c=590427246856257970&a=589582284739462252&d=30.03003&br=25229&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 20268,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_20000kbs_autofps_48khz_320Kbs.mp4?c=590427246856257970&a=589582284739462252&d=30.03&br=20268&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 20155,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_20000Kbs_autofps_48khz_320Kbs_1080p_H264_high.mp4?c=590427246856257970&a=589582284739462252&d=30.03&br=20155&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 10109,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_10000kbs_30fps_48khz_320Kbs_1080p.mp4?c=590427246856257970&a=589582284739462252&d=30.03003&br=10109&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 10011,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_10000Kbs_30fps_48khz_320Kbs_1080p_H264_high.mp4?c=590427246856257970&a=589582284739462252&d=30.03003&br=10011&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 4013,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_4000kbs_30fps_48khz_192Kbs_1080p.mp4?c=590427246856257970&a=589582284739462252&d=30.03003&br=4013&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 3987,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_4000Kbs_30fps_48khz_192Kbs_1080p_H264_high.mp4?c=590427246856257970&a=589582284739462252&d=30.03003&br=3987&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 3489,
+                "height": 720,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_3500Kbs_30fps_48khz_128Kbs_720p_H264_high.mp4?c=590427246856257970&a=589582284739462252&d=30.03003&br=3489&w=1280&h=720&ct=-&ca=-",
+                "width": 1280
+              },
+              {
+                "bitrate": 3389,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_3400Kbs_30fps_48khz_192Kbs_1080p_H264_high.mp4?c=590427246856257970&a=589582284739462252&d=30.03003&br=3389&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 2097,
+                "height": 480,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_2100Kbs_30fps_48khz_192Kbs_480p_H264_main.mp4?c=590427246856257970&a=589582284739462252&d=30.03003&br=2097&w=854&h=480&ct=-&ca=-",
+                "width": 854
+              },
+              {
+                "bitrate": 2093,
+                "height": 576,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_2100Kbs_30fps_48khz_192Kbs_576p_H264_high.mp4?c=590427246856257970&a=589582284739462252&d=30.03003&br=2093&w=1024&h=576&ct=-&ca=-",
+                "width": 1024
+              },
+              {
+                "bitrate": 1996,
+                "height": 720,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_2000kbs_30fps_48khz_96Kbs_720p.mp4?c=590427246856257970&a=589582284739462252&d=30.03003&br=1996&w=1280&h=720&ct=-&ca=-",
+                "width": 1280
+              },
+              {
+                "bitrate": 1994,
+                "height": 720,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_2000Kbs_30fps_48khz_192Kbs_720p_H264_high.mp4?c=590427246856257970&a=589582284739462252&d=30.03003&br=1994&w=1280&h=720&ct=-&ca=-",
+                "width": 1280
+              },
+              {
+                "bitrate": 1994,
+                "height": 720,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_2000Kbs_30fps_48khz_96Kbs_720p_H264_high.mp4?c=590427246856257970&a=589582284739462252&d=30.03003&br=1994&w=1280&h=720&ct=-&ca=-",
+                "width": 1280
+              },
+              {
+                "bitrate": 1496,
+                "height": 576,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_1500Kbs_25fps_48khz_128Kbs_576p_H264_high.mp4?c=590427246856257970&a=589582284739462252&d=30.04&br=1496&w=1024&h=576&ct=-&ca=-",
+                "width": 1024
+              },
+              {
+                "bitrate": 1495,
+                "height": 540,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_1500Kbs_30fps_48khz_192Kbs_540p_H264_high.mp4?c=590427246856257970&a=589582284739462252&d=30.03003&br=1495&w=960&h=540&ct=-&ca=-",
+                "width": 960
+              },
+              {
+                "bitrate": 1346,
+                "height": 540,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_1350Kbs_25fps_48khz_128Kbs_540p_H264_main.mp4?c=590427246856257970&a=589582284739462252&d=30.04&br=1346&w=960&h=540&ct=-&ca=-",
+                "width": 960
+              },
+              {
+                "bitrate": 1346,
+                "height": 720,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_1350kbs_30fps_48khz_96Kbs_720p.mp4?c=590427246856257970&a=589582284739462252&d=30.03003&br=1346&w=1280&h=720&ct=-&ca=-",
+                "width": 1280
+              },
+              {
+                "bitrate": 1346,
+                "height": 720,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_1350Kbs_30fps_48khz_96Kbs_720p_H264_high.mp4?c=590427246856257970&a=589582284739462252&d=30.03003&br=1346&w=1280&h=720&ct=-&ca=-",
+                "width": 1280
+              },
+              {
+                "bitrate": 901,
+                "height": 480,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_900Kbs_15fps_48khz_96Kbs_480p.mp4?c=590427246856257970&a=589582284739462252&d=30.133333&br=901&w=854&h=480&ct=-&ca=-",
+                "width": 854
+              },
+              {
+                "bitrate": 898,
+                "height": 480,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_900Kbs_30fps_48khz_96Kbs_480p_H264_baseline.mp4?c=590427246856257970&a=589582284739462252&d=30.03003&br=898&w=854&h=480&ct=-&ca=-",
+                "width": 854
+              },
+              {
+                "bitrate": 748,
+                "height": 576,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_750Kbs_25fps_48khz_96Kbs_576p_H264_high.mp4?c=590427246856257970&a=589582284739462252&d=30.04&br=748&w=1024&h=576&ct=-&ca=-",
+                "width": 1024
+              },
+              {
+                "bitrate": 748,
+                "height": 432,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_750Kbs_30fps_48khz_192Kbs_432p_H264_high.mp4?c=590427246856257970&a=589582284739462252&d=30.03003&br=748&w=768&h=432&ct=-&ca=-",
+                "width": 768
+              },
+              {
+                "bitrate": 600,
+                "height": 480,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_600Kbs_15fps_48khz_96Kbs_480p.mp4?c=590427246856257970&a=589582284739462252&d=30.133333&br=600&w=854&h=480&ct=-&ca=-",
+                "width": 854
+              },
+              {
+                "bitrate": 600,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_600Kbs_25fps_48khz_128Kbs_360p_H264_baseline.mp4?c=590427246856257970&a=589582284739462252&d=30.04&br=600&w=640&h=360&ct=-&ca=-",
+                "width": 640
+              },
+              {
+                "bitrate": 599,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_600Kbs_30fps_48khz_128Kbs_360p_H264_baseline.mp4?c=590427246856257970&a=589582284739462252&d=30.03003&br=599&w=640&h=360&ct=-&ca=-",
+                "width": 640
+              },
+              {
+                "bitrate": 598,
+                "height": 480,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_600Kbs_30fps_48khz_96Kbs_480p_H264_baseline.mp4?c=590427246856257970&a=589582284739462252&d=30.03003&br=598&w=854&h=480&ct=-&ca=-",
+                "width": 854
+              },
+              {
+                "bitrate": 449,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_450Kbs_30fps_48khz_96Kbs_360p_H264_baseline.mp4?c=590427246856257970&a=589582284739462252&d=30.03003&br=449&w=640&h=360&ct=-&ca=-",
+                "width": 640
+              },
+              {
+                "bitrate": 374,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_375Kbs_30fps_48khz_192Kbs_360p_H264_high.mp4?c=590427246856257970&a=589582284739462252&d=30.03003&br=374&w=640&h=360&ct=-&ca=-",
+                "width": 640
+              },
+              {
+                "bitrate": 319,
+                "height": 576,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_320Kbs_25fps_48khz_96Kbs_576p_H264_high.mp4?c=590427246856257970&a=589582284739462252&d=30.04&br=319&w=1024&h=576&ct=-&ca=-",
+                "width": 1024
+              },
+              {
+                "bitrate": 300,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_300Kbs_15fps_48khz_96Kbs_360p.mp4?c=590427246856257970&a=589582284739462252&d=30.133333&br=300&w=640&h=360&ct=-&ca=-",
+                "width": 640
+              },
+              {
+                "bitrate": 300,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_300Kbs_30fps_48khz_96Kbs_360p_H264_baseline.mp4?c=590427246856257970&a=589582284739462252&d=30.03003&br=300&w=640&h=360&ct=-&ca=-",
+                "width": 640
+              },
+              {
+                "bitrate": 261,
+                "height": 180,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7425b17a-14ee-4ce4-b84f-8fc8bd38fd72.mp4/mp4_260Kbs_25fps_48khz_64Kbs_180p_H264_baseline.mp4?c=590427246856257970&a=589582284739462252&d=30.04&br=261&w=320&h=180&ct=-&ca=-",
+                "width": 320
+              }
+            ],
+            "tracking": []
+          },
+          {
+            "adid": "578833480976239969",
+            "adserver": "https://aax-ott.amazon-adsystem.com/e/dtb/tag/getAd?dur=30&dealId=aps7fe0c603&country=US&src=4032&slotId=51069&slot=d10d178f-63a4-492f-abe6-f58d28f51ef4&appId=6eea141e4f174507a102bf3ed3f1676a&idfa=1f85be60-a358-5fda-8b62-12a387b645f2&us_privacy=&coppa=0&cb=851633190&rating=m2&id=A+New+Crewmate!+The+Musician,+Humming+Brook!&genre=anime&length=1440000",
+            "adsystem": "Amazon",
+            "adtitle": "XCM | POLV BTS Q3 2024 | Spend Less Fudge | :30 | English",
+            "clickthrough": "https://aax-us-pdx.amazon-adsystem.com/x/c/RKDqY5Vyn8An48Vo8AuWsmsAAAGQyAlp1QYAAA_ABgBhcHNfbHR0bF9iaWQxICBhcHNfdHhuX2ltcDEgICBi3j1h/https://www.amazon.com/backtoschool?ref=o_disp_578833480976239969_590333298833588309&tag=dikius-20&aref=iB5YEhp71R",
+            "companionads": [],
+            "creativeadid": "578833480976239969",
+            "creativeid": "590333298833588309",
+            "duration": 30,
+            "streamformat": "mp4",
+            "streams": [
+              {
+                "bitrate": 455,
+                "height": 480,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_450Kbs_15fps_48khz_96Kbs_360p.mp4?c=590333298833588309&a=578833480976239969&d=30.133333&br=455&w=854&h=480&ct=-&ca=-",
+                "width": 854
+              },
+              {
+                "bitrate": 25127,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_25000Kbs_30fps_48khz_192Kbs_1080p_H264_high.mp4?c=590333298833588309&a=578833480976239969&d=30.03003&br=25127&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 25127,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_25000Kbs_30fps_48khz_192Kbs_1080p_H264_main.mp4?c=590333298833588309&a=578833480976239969&d=30.03003&br=25127&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 20138,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_20000kbs_autofps_48khz_320Kbs.mp4?c=590333298833588309&a=578833480976239969&d=30.03&br=20138&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 20117,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_20000Kbs_autofps_48khz_320Kbs_1080p_H264_high.mp4?c=590333298833588309&a=578833480976239969&d=30.03&br=20117&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 10113,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_10000kbs_30fps_48khz_320Kbs_1080p.mp4?c=590333298833588309&a=578833480976239969&d=30.03003&br=10113&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 10085,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_10000Kbs_30fps_48khz_320Kbs_1080p_H264_high.mp4?c=590333298833588309&a=578833480976239969&d=30.03003&br=10085&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 4049,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_4000kbs_30fps_48khz_192Kbs_1080p.mp4?c=590333298833588309&a=578833480976239969&d=30.03003&br=4049&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 4015,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_4000Kbs_30fps_48khz_192Kbs_1080p_H264_high.mp4?c=590333298833588309&a=578833480976239969&d=30.03003&br=4015&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 3525,
+                "height": 720,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_3500Kbs_30fps_48khz_128Kbs_720p_H264_high.mp4?c=590333298833588309&a=578833480976239969&d=30.03003&br=3525&w=1280&h=720&ct=-&ca=-",
+                "width": 1280
+              },
+              {
+                "bitrate": 3411,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_3400Kbs_30fps_48khz_192Kbs_1080p_H264_high.mp4?c=590333298833588309&a=578833480976239969&d=30.03003&br=3411&w=1920&h=1080&ct=-&ca=-",
+                "width": 1920
+              },
+              {
+                "bitrate": 2122,
+                "height": 480,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_2100Kbs_30fps_48khz_192Kbs_480p_H264_main.mp4?c=590333298833588309&a=578833480976239969&d=30.03003&br=2122&w=854&h=480&ct=-&ca=-",
+                "width": 854
+              },
+              {
+                "bitrate": 2118,
+                "height": 576,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_2100Kbs_30fps_48khz_192Kbs_576p_H264_high.mp4?c=590333298833588309&a=578833480976239969&d=30.03003&br=2118&w=1024&h=576&ct=-&ca=-",
+                "width": 1024
+              },
+              {
+                "bitrate": 2025,
+                "height": 720,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_2000kbs_30fps_48khz_96Kbs_720p.mp4?c=590333298833588309&a=578833480976239969&d=30.03003&br=2025&w=1280&h=720&ct=-&ca=-",
+                "width": 1280
+              },
+              {
+                "bitrate": 2013,
+                "height": 720,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_2000Kbs_30fps_48khz_192Kbs_720p_H264_high.mp4?c=590333298833588309&a=578833480976239969&d=30.03003&br=2013&w=1280&h=720&ct=-&ca=-",
+                "width": 1280
+              },
+              {
+                "bitrate": 2013,
+                "height": 720,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_2000Kbs_30fps_48khz_96Kbs_720p_H264_high.mp4?c=590333298833588309&a=578833480976239969&d=30.03003&br=2013&w=1280&h=720&ct=-&ca=-",
+                "width": 1280
+              },
+              {
+                "bitrate": 1516,
+                "height": 576,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_1500Kbs_25fps_48khz_128Kbs_576p_H264_high.mp4?c=590333298833588309&a=578833480976239969&d=30.04&br=1516&w=1024&h=576&ct=-&ca=-",
+                "width": 1024
+              },
+              {
+                "bitrate": 1512,
+                "height": 540,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_1500Kbs_30fps_48khz_192Kbs_540p_H264_high.mp4?c=590333298833588309&a=578833480976239969&d=30.03003&br=1512&w=960&h=540&ct=-&ca=-",
+                "width": 960
+              },
+              {
+                "bitrate": 1367,
+                "height": 720,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_1350kbs_30fps_48khz_96Kbs_720p.mp4?c=590333298833588309&a=578833480976239969&d=30.03003&br=1367&w=1280&h=720&ct=-&ca=-",
+                "width": 1280
+              },
+              {
+                "bitrate": 1366,
+                "height": 720,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_1350Kbs_30fps_48khz_96Kbs_720p_H264_high.mp4?c=590333298833588309&a=578833480976239969&d=30.03003&br=1366&w=1280&h=720&ct=-&ca=-",
+                "width": 1280
+              },
+              {
+                "bitrate": 1364,
+                "height": 540,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_1350Kbs_25fps_48khz_128Kbs_540p_H264_main.mp4?c=590333298833588309&a=578833480976239969&d=30.04&br=1364&w=960&h=540&ct=-&ca=-",
+                "width": 960
+              },
+              {
+                "bitrate": 911,
+                "height": 480,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_900Kbs_15fps_48khz_96Kbs_480p.mp4?c=590333298833588309&a=578833480976239969&d=30.133333&br=911&w=854&h=480&ct=-&ca=-",
+                "width": 854
+              },
+              {
+                "bitrate": 911,
+                "height": 480,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_900Kbs_30fps_48khz_96Kbs_480p_H264_baseline.mp4?c=590333298833588309&a=578833480976239969&d=30.03003&br=911&w=854&h=480&ct=-&ca=-",
+                "width": 854
+              },
+              {
+                "bitrate": 759,
+                "height": 576,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_750Kbs_25fps_48khz_96Kbs_576p_H264_high.mp4?c=590333298833588309&a=578833480976239969&d=30.04&br=759&w=1024&h=576&ct=-&ca=-",
+                "width": 1024
+              },
+              {
+                "bitrate": 757,
+                "height": 432,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_750Kbs_30fps_48khz_192Kbs_432p_H264_high.mp4?c=590333298833588309&a=578833480976239969&d=30.03003&br=757&w=768&h=432&ct=-&ca=-",
+                "width": 768
+              },
+              {
+                "bitrate": 608,
+                "height": 480,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_600Kbs_15fps_48khz_96Kbs_480p.mp4?c=590333298833588309&a=578833480976239969&d=30.133333&br=608&w=854&h=480&ct=-&ca=-",
+                "width": 854
+              },
+              {
+                "bitrate": 608,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_600Kbs_25fps_48khz_128Kbs_360p_H264_baseline.mp4?c=590333298833588309&a=578833480976239969&d=30.04&br=608&w=640&h=360&ct=-&ca=-",
+                "width": 640
+              },
+              {
+                "bitrate": 608,
+                "height": 480,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_600Kbs_30fps_48khz_96Kbs_480p_H264_baseline.mp4?c=590333298833588309&a=578833480976239969&d=30.03003&br=608&w=854&h=480&ct=-&ca=-",
+                "width": 854
+              },
+              {
+                "bitrate": 607,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_600Kbs_30fps_48khz_128Kbs_360p_H264_baseline.mp4?c=590333298833588309&a=578833480976239969&d=30.03003&br=607&w=640&h=360&ct=-&ca=-",
+                "width": 640
+              },
+              {
+                "bitrate": 456,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_450Kbs_30fps_48khz_96Kbs_360p_H264_baseline.mp4?c=590333298833588309&a=578833480976239969&d=30.03003&br=456&w=640&h=360&ct=-&ca=-",
+                "width": 640
+              },
+              {
+                "bitrate": 379,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_375Kbs_30fps_48khz_192Kbs_360p_H264_high.mp4?c=590333298833588309&a=578833480976239969&d=30.03003&br=379&w=640&h=360&ct=-&ca=-",
+                "width": 640
+              },
+              {
+                "bitrate": 324,
+                "height": 576,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_320Kbs_25fps_48khz_96Kbs_576p_H264_high.mp4?c=590333298833588309&a=578833480976239969&d=30.04&br=324&w=1024&h=576&ct=-&ca=-",
+                "width": 1024
+              },
+              {
+                "bitrate": 304,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_300Kbs_15fps_48khz_96Kbs_360p.mp4?c=590333298833588309&a=578833480976239969&d=30.133333&br=304&w=640&h=360&ct=-&ca=-",
+                "width": 640
+              },
+              {
+                "bitrate": 304,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_300Kbs_30fps_48khz_96Kbs_360p_H264_baseline.mp4?c=590333298833588309&a=578833480976239969&d=30.03003&br=304&w=640&h=360&ct=-&ca=-",
+                "width": 640
+              },
+              {
+                "bitrate": 264,
+                "height": 180,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cc0c9b6a-c1a8-475a-a446-7e075e735c0e.mp4/mp4_260Kbs_25fps_48khz_64Kbs_180p_H264_baseline.mp4?c=590333298833588309&a=578833480976239969&d=30.04&br=264&w=320&h=180&ct=-&ca=-",
+                "width": 320
+              }
+            ],
+            "tracking": []
+          },
+          {
+            "adid": "1129889-1-n",
+            "adserver": "https://pbs.getpublica.com/v1/s2s-hb?site_id=29966&app_bundle=2595&did=1f85be60-a358-5fda-8b62-12a387b645f2&format=vast&slot_count=1&cb=544272496&player_height=1080&player_width=1920&app_domain=crunchyroll.com&app_name=CRUNCHYROLL&app_store_url=https://channelstore.roku.com/details/2595/crunchyroll&content_genre=anime&content_id=GRDQV35ZY&content_length=1440000&content_rating=m2&content_series=one+piece&content_title=A+New+Crewmate!+The+Musician,+Humming+Brook!&livestream=0&adserver=gam&content_episode=&us_privacy=&did_type=rida&min_ad_duration=15&max_ad_duration=30&content_language=&plcmt=1&vpmute=0",
+            "adsystem": "Innovid Ads",
+            "adtitle": "Venus_FIG_Awareness_FIG-Razor-KCG-Awards_30s_Video_Demo",
+            "clickthrough": "https://dts.innovid.com/clktru/action/vclk?project_hash=1iq0fo&client_id=8492&video_id=1295597&channel_id=4162801&publisher_id=1271&placement_tag_id=0&project_state=2&r=1721342980223&placement_hash=1dakut&device_id=bff2c081-03ff-e71e-d2dc-30c451e140c6&action=clktru&click=https%3A%2F%2Fwww.gillettevenus.com%2Fen-us%2Fpubic-care%3Futm_source%3Dttd%26utm_medium%3Dott%26utm_campaign%3Dfig-prospecting",
+            "companionads": [
+              {
+                "height": 0,
+                "mimetype": "unknown",
+                "tracking": [
+                  {
+                    "event": "Impression",
+                    "time": 0,
+                    "triggered": false,
+                    "url": "https://enduser.adsrvr.org/enduser/video/?ve=expand&imp=d57c0512-b72e-4efe-ad85-4400a8d3865d&ag=63pv9pc&crid=d6j5ftww&cf=6958312&fq=0&t=1&td_s=2595&rcats=&mste=&mfld=4&mssi=&mfsi=&sv=tremor&uhow=111&agsa=&wp=19.692&rgz=90040&dt=ConnectedTV&osf=Other&os=Other&br=Other&svpid=9l6ha-hwhw3&rlangs=en&mlang=&did=1bb49.b1126.f61d.SPX&rcxt=InApp&tmpc=28.450000000000045&vrtd=14,15&osi=&osv=&daid=bff2c081-03ff-e71e-d2dc-30c451e140c6&dnr=0&vpb=MidRoll&c=Cg1Vbml0ZWQgU3RhdGVzEgpDYWxpZm9ybmlhGgM4MDMiC0xvcyBBbmdlbGVzMAQ4AEgAUAhYBIABAIgBApABAZgBB6gBAbABALoBBgi4ggwYCMkBmZmZmZnZTUDgAQDoAQD9AQAAAACSAgs5bDZoYS1uaHZkZNgCC-AC7A7oAh7wAgX4AgGAAwCIAwGQAwGYAwSgAz2wAwG4A4GEBfIDAJoEB3VlNW00anagBASoBACwBAA.&dur=CicKDWNoYXJnZS1hbGwtMzYiFgjc__________8BEglhZGJyYWluaGgKGgoHeTNobXJ2MyIPCMGNtwESCHR0ZGFic2VnOAA.&durs=QEgQLO&crrelr=&npt=&bdc=95&mk=Roku&mdl=Digital%20Video%20player&testid=iavc1%20&fpa=995&pcm=3&ict=Unknown&said=8f78fd1e-8388-4a9a-98ac-7214475d2ab6&auct=1&mgnr=animation&cxlvs=0&csg=EixBIE5ldyBDcmV3bWF0ZSEgVGhlIE11c2ljaWFuLCBIdW1taW5nIEJyb29rIRoJb25lIHBpZWNlIgA6CWFuaW1hdGlvbg..&tail=1&sfe=18d11c04&vp=0"
+                  },
+                  {
+                    "event": "Close",
+                    "triggered": false,
+                    "url": "https://enduser.adsrvr.org/enduser/video/?ve=collapse&imp=d57c0512-b72e-4efe-ad85-4400a8d3865d&ag=63pv9pc&crid=d6j5ftww&cf=6958312&fq=0&t=1&td_s=2595&rcats=&mste=&mfld=4&mssi=&mfsi=&sv=tremor&uhow=111&agsa=&wp=19.692&rgz=90040&dt=ConnectedTV&osf=Other&os=Other&br=Other&svpid=9l6ha-hwhw3&rlangs=en&mlang=&did=1bb49.b1126.f61d.SPX&rcxt=InApp&tmpc=28.450000000000045&vrtd=14,15&osi=&osv=&daid=bff2c081-03ff-e71e-d2dc-30c451e140c6&dnr=0&vpb=MidRoll&c=Cg1Vbml0ZWQgU3RhdGVzEgpDYWxpZm9ybmlhGgM4MDMiC0xvcyBBbmdlbGVzMAQ4AEgAUAhYBIABAIgBApABAZgBB6gBAbABALoBBgi4ggwYCMkBmZmZmZnZTUDgAQDoAQD9AQAAAACSAgs5bDZoYS1uaHZkZNgCC-AC7A7oAh7wAgX4AgGAAwCIAwGQAwGYAwSgAz2wAwG4A4GEBfIDAJoEB3VlNW00anagBASoBACwBAA.&dur=CicKDWNoYXJnZS1hbGwtMzYiFgjc__________8BEglhZGJyYWluaGgKGgoHeTNobXJ2MyIPCMGNtwESCHR0ZGFic2VnOAA.&durs=QEgQLO&crrelr=&npt=&bdc=95&mk=Roku&mdl=Digital%20Video%20player&testid=iavc1%20&fpa=995&pcm=3&ict=Unknown&said=8f78fd1e-8388-4a9a-98ac-7214475d2ab6&auct=1&mgnr=animation&cxlvs=0&csg=EixBIE5ldyBDcmV3bWF0ZSEgVGhlIE11c2ljaWFuLCBIdW1taW5nIEJyb29rIRoJb25lIHBpZWNlIgA6CWFuaW1hdGlvbg..&tail=1&sfe=18d11c04&vp=0"
+                  }
+                ],
+                "url": "",
+                "width": 0
+              }
+            ],
+            "creativeadid": "",
+            "creativeid": "1ioca9",
+            "duration": 30,
+            "streamformat": "mp4",
+            "streams": [
+              {
+                "bitrate": 800,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://s-static.innovid.com/media/encoded/06_24/787672/2_source_195348_1055460.mp4",
+                "width": 640
+              },
+              {
+                "bitrate": 300,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://s-static.innovid.com/media/encoded/06_24/788630/6_source_195348_1055460.mp4",
+                "width": 640
+              },
+              {
+                "bitrate": 700,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://s-static.innovid.com/media/encoded/06_24/787672/7_source_195348_1055460.mp4",
+                "width": 640
+              },
+              {
+                "bitrate": 1000,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://s-static.innovid.com/media/encoded/06_24/788630/8_source_195348_1055460.mp4",
+                "width": 640
+              },
+              {
+                "bitrate": 400,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://s-static.innovid.com/media/encoded/06_24/788630/10_source_195348_1055460.mp4",
+                "width": 640
+              },
+              {
+                "bitrate": 2000,
+                "height": 720,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://s-static.innovid.com/media/encoded/06_24/787672/11_source_195348_1055460.mp4",
+                "width": 1280
+              },
+              {
+                "bitrate": 4000,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://s-static.innovid.com/media/encoded/06_24/788630/13_source_195348_1055460.mp4",
+                "width": 1920
+              },
+              {
+                "bitrate": 20000,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://s-static.innovid.com/media/encoded/06_24/787672/19_source_195348_1055460.mp4",
+                "width": 1920
+              },
+              {
+                "bitrate": 2100,
+                "height": 576,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://s-static.innovid.com/media/encoded/06_24/788630/32_source_195348_1055460.mp4",
+                "width": 1024
+              },
+              {
+                "bitrate": 700,
+                "height": 480,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://s-static.innovid.com/media/encoded/06_24/788630/36_source_195348_1055460.mp4",
+                "width": 854
+              },
+              {
+                "bitrate": 750,
+                "height": 432,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://s-static.innovid.com/media/encoded/06_24/788630/37_source_195348_1055460.mp4",
+                "width": 768
+              },
+              {
+                "bitrate": 1500,
+                "height": 540,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://s-static.innovid.com/media/encoded/06_24/788630/38_source_195348_1055460.mp4",
+                "width": 960
+              },
+              {
+                "bitrate": 375,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://s-static.innovid.com/media/encoded/06_24/788630/39_source_195348_1055460.mp4",
+                "width": 640
+              },
+              {
+                "bitrate": 8000,
+                "height": 1080,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://s-static.innovid.com/media/encoded/06_24/788630/41_source_195348_1055460.mp4",
+                "width": 1920
+              },
+              {
+                "bitrate": 550,
+                "height": 360,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://s-static.innovid.com/media/encoded/06_24/788630/44_source_195348_1055460.mp4",
+                "width": 640
+              },
+              {
+                "bitrate": 4125,
+                "height": 720,
+                "mimetype": "video/mp4",
+                "provider": "",
+                "url": "https://s-static.innovid.com/media/encoded/06_24/788630/52_source_195348_1055460.mp4",
+                "width": 1280
+              }
+            ],
+            "tracking": []
+          }
+        ]
+      }
+
     }
   ]
 }

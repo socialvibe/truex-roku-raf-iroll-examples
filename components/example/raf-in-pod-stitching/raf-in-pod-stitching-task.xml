@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="RAFInPodStitchingTask" extends="Task"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+  <interface>
+    <field id="view" type="node" />
+    <field id="adPod" type="assocarray" />
+  </interface>
+
+  <script type="text/brightscript" uri="pkg:/components/example/raf-in-pod-stitching/raf-in-pod-stitching-task.brs" />
+  <script type="text/brightscript" uri="pkg:/components/utils/trace.brs" />
+  <script type="text/brightscript" uri="pkg:/components/utils/types.brs" />
+  <script type="text/brightscript">
+    <![CDATA[
+      sub init()
+        m.top.functionName = "runInBackground"
+      end sub
+    ]]>
+  </script>
+</component>
